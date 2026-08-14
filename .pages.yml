@@ -1,9 +1,29 @@
 media:
   input: images
   output: images
-  extensions: [jpg, jpeg, png, webp]
+  extensions: [jpg, jpeg, png, webp, gif]
 content:
-  - { name: home, label: 首页, type: file, path: content/home.json, format: json, fields: [{ name: name, label: 姓名, type: string }, { name: hero, label: 主标题, type: string }, { name: intro, label: 简介, type: text }, { name: location, label: 所在地, type: string }, { name: background, label: 首页背景, type: image }] }
+  - name: home
+    label: 首页
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - { name: name, label: 姓名, type: string }
+      - { name: hero, label: 主标题, type: string }
+      - { name: intro, label: 简介, type: text }
+      - { name: location, label: 所在地, type: string }
+      - { name: background, label: 首页背景, type: image }
+      - name: projects
+        label: 首页项目
+        type: object
+        list: true
+        fields:
+          - { name: title, label: 项目名, type: string }
+          - { name: tags, label: 分类, type: string }
+          - { name: image, label: 封面, type: image }
+          - { name: href, label: 页面链接, type: string }
+          - { name: wide, label: 横跨整行, type: boolean, default: false }
   - name: works
     label: 作品列表
     type: file
