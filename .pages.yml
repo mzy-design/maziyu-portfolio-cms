@@ -1,0 +1,50 @@
+media:
+  input: images
+  output: images
+  extensions: [jpg, jpeg, png, webp]
+content:
+  - { name: home, label: 首页, type: file, path: content/home.json, format: json, fields: [{ name: name, label: 姓名, type: string }, { name: hero, label: 主标题, type: string }, { name: intro, label: 简介, type: text }, { name: location, label: 所在地, type: string }, { name: background, label: 首页背景, type: image }] }
+  - name: works
+    label: 作品列表
+    type: file
+    path: content/works.json
+    format: json
+    fields:
+      - { name: title, label: 标题, type: string }
+      - { name: intro, label: 简介, type: text }
+      - name: projects
+        label: 作品
+        type: object
+        list: true
+        fields:
+          - { name: title, label: 项目名, type: string }
+          - { name: tags, label: 分类, type: string }
+          - { name: image, label: 封面, type: image }
+          - { name: href, label: 页面链接, type: string }
+  - { name: about, label: 关于, type: file, path: content/about.json, format: json, fields: [{ name: kicker, label: 小标题, type: string }, { name: title, label: 标题, type: text }, { name: bio, label: 简介段落, type: string, list: true }, { name: services, label: 服务, type: string, list: true }, { name: email, label: 邮箱, type: string }] }
+  - name: contact
+    label: 联系
+    type: file
+    path: content/contact.json
+    format: json
+    fields:
+      - { name: kicker, label: 小标题, type: string }
+      - { name: title, label: 标题, type: text }
+      - { name: email, label: 邮箱, type: string }
+      - { name: location, label: 所在地, type: string }
+      - { name: socials, label: 社交链接, type: object, list: true, fields: [{ name: label, label: 名称, type: string }, { name: href, label: 链接, type: string }] }
+  - name: project
+    label: 作品详情示例
+    type: file
+    path: content/project.json
+    format: json
+    fields:
+      - { name: number, label: 编号, type: string }
+      - { name: title, label: 项目名, type: string }
+      - { name: subtitle, label: 副标题, type: string }
+      - { name: year, label: 年份, type: string }
+      - { name: services, label: 服务, type: string }
+      - { name: hero, label: 主图, type: image }
+      - { name: statement, label: 核心陈述, type: text }
+      - { name: body, label: 正文, type: text }
+      - { name: gallery, label: 画廊, type: image, list: true }
