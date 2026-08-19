@@ -41,17 +41,49 @@ content:
           - { name: tags, label: 分类, type: string }
           - { name: image, label: 封面, type: image }
           - { name: href, label: 页面链接, type: string }
-  - { name: about, label: 关于, type: file, path: content/about.json, format: json, fields: [{ name: kicker, label: 小标题, type: string }, { name: title, label: 标题, type: text }, { name: bio, label: 简介段落, type: string, list: true }, { name: services, label: 服务, type: string, list: true }, { name: email, label: 邮箱, type: string }] }
+  - name: about
+    label: 关于
+    type: file
+    path: content/about.json
+    format: json
+    fields:
+      - { name: kicker, label: 小标题, type: string }
+      - { name: title, label: 主标题, type: text }
+      - { name: intro, label: 简介段落, type: text, list: true }
+      - { name: portrait, label: 个人照片, type: image }
+      - name: experience
+        label: 工作经历
+        type: object
+        list: true
+        fields:
+          - { name: company, label: 公司, type: string }
+          - { name: role, label: 职位, type: string }
+          - { name: period, label: 时间, type: string }
+          - { name: summary, label: 经历说明, type: text }
+      - name: education
+        label: 教育经历
+        type: object
+        list: true
+        fields:
+          - { name: school, label: 学校, type: string }
+          - { name: major, label: 专业学历, type: string }
+          - { name: period, label: 时间, type: string }
+          - { name: detail, label: 补充信息, type: text }
+      - { name: honors, label: 荣誉, type: string, list: true }
+      - { name: skills, label: 核心技能, type: string, list: true }
+      - { name: languages, label: 语言能力, type: string, list: true }
   - name: contact
     label: 联系
     type: file
     path: content/contact.json
     format: json
     fields:
-      - { name: kicker, label: 小标题, type: string }
       - { name: title, label: 标题, type: text }
       - { name: email, label: 邮箱, type: string }
-      - { name: location, label: 所在地, type: string }
+      - { name: copyLabel, label: 复制邮箱按钮, type: string }
+      - { name: wechatLabel, label: 微信按钮, type: string }
+      - { name: wechatImage, label: 微信二维码, type: image, required: false }
+      - { name: wechatPlaceholder, label: 二维码占位文字, type: string }
       - { name: socials, label: 社交链接, type: object, list: true, fields: [{ name: label, label: 名称, type: string }, { name: href, label: 链接, type: string }] }
   - name: project
     label: 作品详情示例

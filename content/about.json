@@ -1,1 +1,59 @@
-{"kicker":"About","title":"Designing quiet objects for everyday rituals.","bio":["I’m Ma ZiYu, an industrial and packaging designer based in Shanghai.","My practice moves between form, material, engineering and visual systems — from the first sketch to production-ready detail."],"services":["Industrial Design","Packaging Design","CMF Direction","Product Development"],"email":"hello@example.com"}
+{
+  "kicker": "About",
+  "title": "从品牌需求到量产落地，建立兼具识别度、功能与商业价值的产品体验。",
+  "intro": [
+    "我是马子煜（Iven），一名常驻上海的工业与包装设计师，拥有 3 年以上产品、工业与包装设计经验，聚焦美妆个护包装、品牌产品设计与结构落地。",
+    "我擅长将品牌需求转化为可生产的产品语言，覆盖概念与 CMF、结构协同、打样测试、开模跟进与量产交付，并持续探索 AI 在概念生成、方案表达与设计提效中的应用。"
+  ],
+  "portrait": "images/about/portrait.jpg",
+  "experience": [
+    {
+      "company": "天下秀集团（HEAVEN PINK）",
+      "role": "产品设计师",
+      "period": "2025.11 — 2026.07",
+      "summary": "建立品牌产品语言，统筹产品、包装与上市视觉，并推进冰熨斗妆前精华乳、轻润柔雾多用棒及面部综合盘的设计与落地。"
+    },
+    {
+      "company": "WWP Beauty",
+      "role": "设计工程师",
+      "period": "2023.03 — 2025.11",
+      "summary": "服务至本、且初、Rare Beauty、Haus Labs、HOURGLASS 等品牌，参与 30+ 项目，并在 15+ 项目中承担项目管理职责，覆盖需求拆解、设计提案、样品验证、开模与量产交付。"
+    },
+    {
+      "company": "北京环球音像出版社",
+      "role": "视觉平面设计师",
+      "period": "2020.08 — 2022.11",
+      "summary": "完成 10+ 专辑及周边项目，负责封面、唱片包装、宣传物料与陈列延展，并协调印刷、材料、成本及供应商交付。"
+    }
+  ],
+  "education": [
+    {
+      "school": "西南石油大学",
+      "major": "工业设计 · 本科",
+      "period": "2017.09 — 2021.07",
+      "detail": "双一流院校 · 国家励志奖学金 · 优秀毕业生"
+    }
+  ],
+  "honors": [
+    "iF New Talent Award 2020",
+    "全国大学生工业设计大赛二等奖",
+    "3 项外观专利 · 2 项实用新型专利"
+  ],
+  "skills": [
+    "品牌需求分析",
+    "CMF",
+    "包装结构",
+    "开模方案",
+    "打样测试",
+    "工艺审核",
+    "量产导入",
+    "Rhino",
+    "KeyShot",
+    "Photoshop",
+    "Illustrator",
+    "Blender",
+    "AI 概念生成",
+    "Vibe Coding"
+  ],
+  "languages": ["IELTS 6.5", "CET-6 520", "英语可作为工作语言"]
+}
