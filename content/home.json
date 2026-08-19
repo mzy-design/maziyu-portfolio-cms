@@ -5,7 +5,12 @@
   "location": "Based in Shanghai",
   "background": "images/home-background.webp",
   "projects": [
-    { "title": "Hourglass", "tags": "Beauty packaging", "image": "images/projects/hourglass/cover.webp", "href": "work/", "wide": false },
+    { "title": "Hourglass", "tags": "Beauty packaging", "image": "images/projects/hourglass/cover.jpg", "href": "work/", "wide": false },
+    { "title": "WWP Beauty", "tags": "Beauty packaging", "image": "images/projects/wwp-beauty/cover.jpg", "href": "work/", "wide": true },
+    { "title": "WWP Keychain", "tags": "Beauty packaging", "image": "images/projects/wwp-keychain/cover.jpg", "href": "work/", "wide": false },
+    { "title": "精准出料", "tags": "Beauty packaging", "image": "images/projects/precision-dispensing/cover.jpg", "href": "work/", "wide": true },
+    { "title": "Heaven Pink Lipstick", "tags": "Beauty packaging", "image": "images/projects/heaven-pink-lipstick/cover.jpg", "href": "work/", "wide": false },
+    { "title": "Heaven Pink Palette", "tags": "Beauty packaging", "image": "images/projects/heaven-pink-palette/cover.jpg", "href": "work/", "wide": false },
     { "title": "Rare Beauty", "tags": "Beauty packaging", "image": "images/projects/rare-beauty/cover.webp", "href": "work/", "wide": false },
     { "title": "Mansion", "tags": "Beauty packaging", "image": "images/projects/mansion/cover.webp", "href": "work/", "wide": false },
     { "title": "Schwan", "tags": "Beauty packaging", "image": "images/projects/schwan/cover.webp", "href": "work/", "wide": false },
