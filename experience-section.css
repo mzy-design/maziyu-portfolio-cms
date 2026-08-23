@@ -40,18 +40,23 @@
 }
 
 .partner-logo {
+  display: grid;
+  height: 78px;
   min-width: 190px;
-  color: #fff !important;
-  font-size: clamp(24px, 3.2vw, 44px);
-  line-height: 1;
-  letter-spacing: -.04em;
-  text-align: center;
-  white-space: nowrap;
+  place-items: center;
 }
 
-.partner-logo:nth-child(4n + 2) { font-family: Georgia, serif; font-style: italic; }
-.partner-logo:nth-child(4n + 3) { font-weight: 700; letter-spacing: -.07em; }
-.partner-logo:nth-child(4n) { font-size: clamp(20px, 2.6vw, 36px); text-transform: uppercase; letter-spacing: .02em; }
+.partner-logo img {
+  display: block;
+  width: auto;
+  max-width: 210px;
+  height: auto;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+.partner-logo img[alt="Pat McGrath Labs"],
+.partner-logo img[alt="至本"] { max-height: 78px; }
 
 @keyframes partner-scroll { to { transform: translateX(-50%); } }
 
@@ -65,4 +70,5 @@
   .partner-marquee { margin-top: 90px; }
   .partner-track { gap: 60px; padding: 0 30px; }
   .partner-logo { min-width: 145px; }
+  .partner-logo img { max-width: 160px; max-height: 56px; }
 }

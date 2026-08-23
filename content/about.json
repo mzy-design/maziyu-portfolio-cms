@@ -19,7 +19,23 @@
     {"companyZh":"WWP Beauty","companyEn":"WWP Beauty","roleZh":"设计工程师","roleEn":"Design Engineer","years":"2023–2025","en":"Developed beauty packaging for global and Chinese brands across concept design, CMF, structural development, prototyping and production, contributing to 30+ projects from early exploration to manufacturing.","zh":"参与国内外美妆品牌包装开发，覆盖概念设计、CMF、结构开发、打样与量产，在 30+ 项目中积累从前期探索到制造落地的完整经验。"},
     {"companyZh":"北京环球音像出版社","companyEn":"Universal Audio & Video Publishing","roleZh":"视觉平面设计师","roleEn":"Visual Designer","years":"2020–2022","en":"Designed album packaging and visual systems across print, physical media and promotional applications, building an early foundation in graphic systems, materials and production.","zh":"负责唱片包装及视觉系统设计，覆盖印刷、实体媒介与宣传延展，由此建立对平面系统、材料与生产工艺的早期理解。"}
   ],
-  "brands": {"names":["Rare Beauty","HOURGLASS","Haus Labs","Schwan Cosmetics","MUZIGAE MANSION","ZHIBEN / 至本","KIMTRUE / 且初","Amway"],"noteEn":"Selected brands and projects contributed to during my work at WWP Beauty.","noteZh":"部分品牌及项目来自 WWP Beauty 任职期间参与的设计与开发工作。"},
+  "brands": {
+    "logos": [
+      {"name":"Hourglass","image":"images/about/brand-logos/hourglass.png"},
+      {"name":"Rare Beauty","image":"images/about/brand-logos/rare-beauty.png"},
+      {"name":"Haus Labs","image":"images/about/brand-logos/haus-labs.png"},
+      {"name":"Muzigae Mansion","image":"images/about/brand-logos/muzigae-mansion.png"},
+      {"name":"Makeup by Mario","image":"images/about/brand-logos/makeup-by-mario.png"},
+      {"name":"Sarah Creal","image":"images/about/brand-logos/sarah-creal.png"},
+      {"name":"Pat McGrath Labs","image":"images/about/brand-logos/pat-mcgrath-labs.png"},
+      {"name":"至本","image":"images/about/brand-logos/zhiben.png"},
+      {"name":"onTop","image":"images/about/brand-logos/ontop.png"},
+      {"name":"春日来信 Spring Letter","image":"images/about/brand-logos/spring-letter.png"},
+      {"name":"Puco","image":"images/about/brand-logos/puco.png"}
+    ],
+    "noteEn":"Selected brands and projects contributed to during my work at WWP Beauty.",
+    "noteZh":"部分品牌及项目来自 WWP Beauty 任职期间参与的设计与开发工作。"
+  },
   "capabilities": [
     {"titleEn":"Product & Packaging Design","titleZh":"产品与包装设计","en":"From product form and packaging architecture to applicators and interaction details, I develop beauty products around both brand identity and everyday use.","zh":"从产品造型、包装结构到涂抹器与交互细节，以品牌识别与真实使用体验为出发点构建设计方案。","keywords":["Concept Development","Form Exploration","Packaging Architecture","Applicator Design","User Interaction"]},
     {"titleEn":"CMF & Product Language","titleZh":"CMF 与产品语言","en":"I build coherent product families through colour, material, finish and detail, translating brand identity into a physical design language.","zh":"通过色彩、材料、表面处理与细节规则建立统一的产品家族，将品牌语言转化为可感知的实体产品语言。","keywords":["CMF Strategy","Colour Systems","Material Selection","Surface Finishing","Product Family Design"]},

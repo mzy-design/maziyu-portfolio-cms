@@ -74,7 +74,13 @@ content:
         label: 合作品牌
         type: object
         fields:
-          - { name: names, label: 品牌名称, type: string, list: true }
+          - name: logos
+            label: 品牌 Logo
+            type: object
+            list: true
+            fields:
+              - { name: name, label: 品牌名称 / 图片说明, type: string }
+              - { name: image, label: Logo 图片, type: image }
           - { name: noteEn, label: 说明（英文）, type: text }
           - { name: noteZh, label: 说明（中文）, type: text }
       - name: capabilities
