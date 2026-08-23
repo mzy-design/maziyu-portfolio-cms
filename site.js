@@ -14,17 +14,11 @@
     : `<div class="media-placeholder ${className}" role="img" aria-label="图片占位符"><span>Image placeholder</span></div>`;
 
   const aboutPageHtml = page === 'about' ? `<main class="about-page">
-    <section class="about-hero"><div class="about-identity"><p>${esc(p.hero.identityEn)}</p><span lang="zh-CN">${esc(p.hero.identityZh)}</span></div><h1>${esc(p.hero.statementEn)}<span lang="zh-CN">${esc(p.hero.statementZh)}</span></h1><div class="about-meta"><p>${esc(p.hero.locationEn)}<span lang="zh-CN">${esc(p.hero.locationZh)}</span></p><p>${esc(p.hero.scopeEn)}<span lang="zh-CN">${esc(p.hero.scopeZh)}</span></p></div></section>
-    <section class="about-introduction about-layout"><header><p>( 01 )</p><h2>${esc(p.introduction.heading)}</h2></header><div class="bilingual-copy"><div>${p.introduction.en.map(text => `<p>${esc(text)}</p>`).join('')}</div><div class="zh" lang="zh-CN">${p.introduction.zh.map(text => `<p>${esc(text)}</p>`).join('')}</div></div></section>
-    <section class="about-experience about-layout"><header><p>( 02 )</p><h2>Experience<span lang="zh-CN">经历</span></h2></header><div class="experience-editorial">${p.experience.map(item => `<article><div class="experience-primary"><h3>${esc(item.company)}</h3><p>${esc(item.role)}</p><time>${esc(item.years)}</time></div><div class="experience-description"><p>${esc(item.en)}</p><p class="zh" lang="zh-CN">${esc(item.zh)}</p></div></article>`).join('')}</div></section>
-    <section class="about-brands about-layout"><header><p>( 03 )</p><h2>Selected Brands<span lang="zh-CN">合作品牌</span></h2></header><div><div class="brand-list">${p.brands.names.map(name => `<span>${esc(name)}</span>`).join('')}</div><p class="section-note">${esc(p.brands.noteEn)}<span lang="zh-CN">${esc(p.brands.noteZh)}</span></p></div></section>
-    <section class="about-capabilities"><header class="about-feature-head"><p>( 04 ) Capabilities / 核心能力</p><h2>Designing across product, packaging and production.<span lang="zh-CN">连接产品、包装与生产的完整设计能力。</span></h2></header><div class="capability-editorial">${p.capabilities.map((item, index) => `<article><span>${String(index + 1).padStart(2, '0')}</span><div class="capability-title"><h3>${esc(item.titleEn)}</h3><p lang="zh-CN">${esc(item.titleZh)}</p></div><div class="capability-copy"><p>${esc(item.en)}</p><p class="zh" lang="zh-CN">${esc(item.zh)}</p><ul>${item.keywords.map(keyword => `<li>${esc(keyword)}</li>`).join('')}</ul></div></article>`).join('')}</div></section>
-    <section class="about-process"><header class="about-feature-head"><p>( 05 ) From Concept to Production</p><h2>From Concept to Production<span lang="zh-CN">从概念到量产</span></h2></header><ol>${p.process.map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.stageEn)}<small lang="zh-CN">${esc(item.stageZh)}</small></h3><p>${esc(item.keywordsEn)}<small lang="zh-CN">${esc(item.keywordsZh)}</small></p></li>`).join('')}</ol><div class="process-statement"><p>${esc(p.processStatementEn)}</p><span lang="zh-CN">${esc(p.processStatementZh)}</span></div></section>
-    <section class="about-bring about-layout"><header><p>( 06 )</p><h2>What I Bring<span lang="zh-CN">我的价值</span></h2></header><div class="bring-list">${p.bring.map((item, index) => `<article><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.titleEn)}<small lang="zh-CN">${esc(item.titleZh)}</small></h3><div><p>${esc(item.en)}</p><p class="zh" lang="zh-CN">${esc(item.zh)}</p></div></article>`).join('')}</div></section>
-    <section class="about-values"><header><p>( 07 ) Values / 设计原则</p></header><div>${p.values.map(item => `<article><h2>${esc(item.titleEn)}<span lang="zh-CN">${esc(item.titleZh)}</span></h2><p>${esc(item.en)}<span lang="zh-CN">${esc(item.zh)}</span></p></article>`).join('')}</div></section>
-    <section class="about-recognition about-layout"><header><p>( 08 )</p><h2>Recognition<span lang="zh-CN">奖项与成果</span></h2></header><div class="recognition-list">${p.recognition.map(item => `<article><h3>${esc(item.title)}</h3><strong>${esc(item.result)}</strong><p>${esc(item.en)}<span lang="zh-CN">${esc(item.zh)}</span></p></article>`).join('')}</div></section>
-    <section class="about-tools about-layout"><header><p>( 09 )</p><h2>Tools & Methods<span lang="zh-CN">工具与方法</span></h2></header><div class="tools-list">${p.tools.map(group => `<article><h3>${esc(group.group)}</h3><ul>${group.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul></article>`).join('')}</div></section>
-    <section class="about-closing"><div><h2>${esc(p.cta.titleEn)}<span lang="zh-CN">${esc(p.cta.titleZh)}</span></h2><div class="closing-copy"><div>${p.cta.bodyEn.map(text => `<p>${esc(text)}</p>`).join('')}</div><div class="zh" lang="zh-CN">${p.cta.bodyZh.map(text => `<p>${esc(text)}</p>`).join('')}</div></div></div><a href="${base}/contact/">${esc(p.cta.labelEn)}<span lang="zh-CN">${esc(p.cta.labelZh)}</span></a></section>
+    <section class="about-opening"><header><h1>${esc(p.introduction.heading)}</h1></header><div class="about-primary zh" lang="zh-CN">${p.introduction.zh.map(text => `<p>${esc(text)}</p>`).join('')}</div><div class="about-media-row"><div class="about-translation">${p.introduction.en.map(text => `<p>${esc(text)}</p>`).join('')}</div>${media(p.introduction.portrait, 'Ma Ziyu portrait', 'about-portrait')}${media(p.introduction.detailImage, 'Design detail', 'about-detail')}</div></section>
+    <section class="about-resume"><header><p>( 01 )</p><h2>Experience<span lang="zh-CN">工作经历</span></h2></header><div class="resume-experience">${p.experience.map(item => `<article><div class="resume-role"><h3>${esc(item.company)}<span>${esc(item.companyEn)}</span></h3><p>${esc(item.role)}<span>${esc(item.roleEn)}</span></p><time>${esc(item.years)}</time></div><div class="resume-highlights">${item.highlights.map(point => `<div><h4>${esc(point.title)}<span>${esc(point.titleEn)}</span></h4><p class="zh" lang="zh-CN">${esc(point.zh)}</p><p class="en">${esc(point.en)}</p></div>`).join('')}</div></article>`).join('')}</div></section>
+    <section class="about-resume about-education"><header><p>( 02 )</p><h2>Education<span lang="zh-CN">教育与荣誉</span></h2></header><div><article class="education-row"><h3>${esc(p.education.school)}<span>${esc(p.education.schoolEn)}</span></h3><p>${esc(p.education.degree)}<span>${esc(p.education.degreeEn)}</span></p><time>${esc(p.education.years)}</time><ul>${p.education.details.map((item, index) => `<li>${esc(item)}<span>${esc(p.education.detailsEn[index])}</span></li>`).join('')}</ul></article><div class="recognition-list">${p.recognition.map(item => `<article><h3>${esc(item.title)}<span>${esc(item.titleEn || item.title)}</span></h3><p class="zh" lang="zh-CN">${esc(item.zh)}</p><p class="en">${esc(item.en)}</p></article>`).join('')}</div></div></section>
+    <section class="about-resume about-skills"><header><p>( 03 )</p><h2>Capabilities<span lang="zh-CN">核心能力</span></h2></header><div class="skills-list">${p.skills.map(group => `<article><h3>${esc(group.group)}<span>${esc(group.groupEn)}</span></h3><ul>${group.items.map((item, index) => `<li>${esc(item)}<span>${esc(group.itemsEn[index])}</span></li>`).join('')}</ul></article>`).join('')}</div></section>
+    <section class="about-closing"><a href="${base}/contact/"><span>${esc(p.cta.label)}</span><small lang="zh-CN">${esc(p.cta.labelZh)}</small></a></section>
   </main>` : '';
 
   const nav = `<header class="nav"><a class="brand" href="${base}/">Ma ZiYu</a><nav><a href="${base}/">Home</a><a href="${base}/works/">Works</a><a href="${base}/about/">About</a></nav><a href="${base}/contact/">Let’s talk</a><button class="menu" aria-label="Open menu">Menu</button></header>`;
@@ -51,19 +45,28 @@
     const work = document.querySelector('#selected-work');
     const setNav = () => navElement.classList.toggle('over-projects', scrollY >= work.offsetTop - 20);
     addEventListener('scroll', setNav, { passive: true }); setNav();
-    if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
+    if (!matchMedia('(prefers-reduced-motion:reduce)').matches) {
       const hero = document.querySelector('.home');
       const trail = document.querySelector('.cursor-trail');
       const sources = p.projects.map(item => asset(item.image));
       sources.forEach(src => { const image = new Image(); image.src = src; });
-      let index = 0, lastX = -100, lastY = -100;
-      hero.addEventListener('pointermove', event => {
-        if (Math.hypot(event.clientX - lastX, event.clientY - lastY) < 100) return;
+      let index = 0, lastX = -100, lastY = -100, touchStart;
+      const spawnTrail = event => {
+        const distance = event.pointerType === 'touch' ? 70 : 100;
+        if (Math.hypot(event.clientX - lastX, event.clientY - lastY) < distance) return;
         lastX = event.clientX; lastY = event.clientY;
         const image = document.createElement('img'); const box = hero.getBoundingClientRect();
         image.className = 'trail-image'; image.src = sources[index % sources.length]; image.style.cssText = `left:${event.clientX}px;top:${event.clientY - box.top}px`;
         trail.append(image); index++; image.addEventListener('animationend', () => image.remove(), { once: true });
-      });
+      };
+      hero.addEventListener('pointerdown', event => {
+        if (event.pointerType === 'touch') touchStart = { x: event.clientX, y: event.clientY };
+      }, { passive: true });
+      hero.addEventListener('pointermove', event => {
+        if (event.pointerType === 'touch' && (!touchStart || Math.abs(event.clientX - touchStart.x) < Math.abs(event.clientY - touchStart.y))) return;
+        spawnTrail(event);
+      }, { passive: true });
+      ['pointerup', 'pointercancel'].forEach(type => hero.addEventListener(type, () => { touchStart = undefined; lastX = lastY = -100; }, { passive: true }));
     }
   }
 })().catch(() => { document.querySelector('#app').innerHTML = '<main class="error"><h1>Content unavailable.</h1></main>'; });
