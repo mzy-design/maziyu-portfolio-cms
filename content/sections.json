@@ -1,0 +1,60 @@
+{
+  "capabilities": {
+    "kicker": "Capabilities",
+    "intro": "从概念、视觉与结构协同，到打样、开模和量产交付。",
+    "image": "",
+    "items": [
+      {
+        "title": "工业与产品设计",
+        "description": "将品牌需求转化为具有识别度、功能性与商业价值的产品语言。",
+        "services": ["品牌需求分析", "趋势与竞品研究", "概念与造型设计", "CMF"]
+      },
+      {
+        "title": "包装与结构设计",
+        "description": "围绕美妆个护产品建立包装、涂抹器与使用体验之间的完整关系。",
+        "services": ["包装结构", "涂抹器探索", "开模方案", "打样测试"]
+      },
+      {
+        "title": "工程与量产落地",
+        "description": "协调结构、工艺与供应链，将设计方案推进至稳定可生产的最终产品。",
+        "services": ["结构协同", "工艺审核", "供应商沟通", "量产导入"]
+      }
+    ],
+    "tools": ["Rhino", "KeyShot", "Photoshop", "Illustrator", "Blender", "AI 概念生成", "Vibe Coding"]
+  },
+  "testimonials": {
+    "kicker": "What people say",
+    "intro": "评价内容可在 CMS 中独立修改。",
+    "items": [
+      {"name": "姓名待编辑", "role": "职位待编辑", "quote": "评价内容待编辑", "image": ""},
+      {"name": "姓名待编辑", "role": "职位待编辑", "quote": "评价内容待编辑", "image": ""},
+      {"name": "姓名待编辑", "role": "职位待编辑", "quote": "评价内容待编辑", "image": ""}
+    ]
+  },
+  "awards": {
+    "kicker": "Awards & Recognitions",
+    "items": [
+      {"award": "iF New Talent Award", "recognition": "获奖", "project": "可持续农业包装再利用鞋履方案", "year": "2020"},
+      {"award": "全国大学生工业设计大赛", "recognition": "二等奖", "project": "智能餐盒项目", "year": "2020"},
+      {"award": "知识产权", "recognition": "设计成果", "project": "3 项外观专利 · 2 项实用新型专利", "year": "—"}
+    ]
+  },
+  "values": {
+    "kicker": "Values",
+    "items": [
+      {"title": "价值观 01", "body": "内容待编辑"},
+      {"title": "价值观 02", "body": "内容待编辑"},
+      {"title": "价值观 03", "body": "内容待编辑"}
+    ]
+  },
+  "cta": {"title": "Let’s talk", "href": "contact/"},
+  "footer": {
+    "name": "MA ZIYU",
+    "links": [
+      {"label": "Home", "href": "./"},
+      {"label": "Works", "href": "works/"},
+      {"label": "About", "href": "#about"},
+      {"label": "Mail", "href": "mailto:358302845@qq.com"}
+    ]
+  }
+}

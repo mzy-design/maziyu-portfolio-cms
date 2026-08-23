@@ -69,9 +69,88 @@ content:
           - { name: major, label: 专业学历, type: string }
           - { name: period, label: 时间, type: string }
           - { name: detail, label: 补充信息, type: text }
-      - { name: honors, label: 荣誉, type: string, list: true }
-      - { name: skills, label: 核心技能, type: string, list: true }
       - { name: languages, label: 语言能力, type: string, list: true }
+  - name: sections
+    label: 首页完整板块
+    type: file
+    path: content/sections.json
+    format: json
+    fields:
+      - name: capabilities
+        label: Capabilities
+        type: object
+        fields:
+          - { name: kicker, label: 小标题, type: string }
+          - { name: intro, label: 简介, type: text }
+          - { name: image, label: 板块图片, type: image, required: false }
+          - name: items
+            label: 能力分类
+            type: object
+            list: true
+            fields:
+              - { name: title, label: 标题, type: string }
+              - { name: description, label: 说明, type: text }
+              - { name: services, label: 服务, type: string, list: true }
+          - { name: tools, label: 工具, type: string, list: true }
+      - name: testimonials
+        label: 评价
+        type: object
+        fields:
+          - { name: kicker, label: 小标题, type: string }
+          - { name: intro, label: 简介, type: text }
+          - name: items
+            label: 评价条目
+            type: object
+            list: true
+            fields:
+              - { name: name, label: 姓名, type: string }
+              - { name: role, label: 职位, type: string }
+              - { name: quote, label: 评价, type: text }
+              - { name: image, label: 图片, type: image, required: false }
+      - name: awards
+        label: Awards
+        type: object
+        fields:
+          - { name: kicker, label: 小标题, type: string }
+          - name: items
+            label: 奖项
+            type: object
+            list: true
+            fields:
+              - { name: award, label: 奖项, type: string }
+              - { name: recognition, label: 结果, type: string }
+              - { name: project, label: 项目, type: string }
+              - { name: year, label: 年份, type: string }
+      - name: values
+        label: Values
+        type: object
+        fields:
+          - { name: kicker, label: 小标题, type: string }
+          - name: items
+            label: 价值观
+            type: object
+            list: true
+            fields:
+              - { name: title, label: 标题, type: string }
+              - { name: body, label: 说明, type: text }
+      - name: cta
+        label: 行动号召
+        type: object
+        fields:
+          - { name: title, label: 标题, type: string }
+          - { name: href, label: 链接, type: string }
+      - name: footer
+        label: 页脚
+        type: object
+        fields:
+          - { name: name, label: 名称, type: string }
+          - name: links
+            label: 链接
+            type: object
+            list: true
+            fields:
+              - { name: label, label: 名称, type: string }
+              - { name: href, label: 链接, type: string }
   - name: contact
     label: 联系
     type: file
@@ -85,18 +164,31 @@ content:
       - { name: wechatImage, label: 微信二维码, type: image, required: false }
       - { name: wechatPlaceholder, label: 二维码占位文字, type: string }
       - { name: socials, label: 社交链接, type: object, list: true, fields: [{ name: label, label: 名称, type: string }, { name: href, label: 链接, type: string }] }
-  - name: project
-    label: 作品详情示例
-    type: file
-    path: content/project.json
+  - name: projects
+    label: 作品详情（11 个独立页面）
+    type: collection
+    path: content/projects
     format: json
     fields:
       - { name: number, label: 编号, type: string }
       - { name: title, label: 项目名, type: string }
       - { name: subtitle, label: 副标题, type: string }
       - { name: year, label: 年份, type: string }
-      - { name: services, label: 服务, type: string }
-      - { name: hero, label: 主图, type: image }
-      - { name: statement, label: 核心陈述, type: text }
-      - { name: body, label: 正文, type: text }
+      - { name: services, label: 服务, type: string, list: true }
+      - { name: hero, label: 主图, type: image, required: false }
+      - { name: overview, label: 项目概述, type: text, required: false }
+      - name: sections
+        label: 内容章节
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: 标题, type: string }
+          - { name: body, label: 正文, type: text, required: false }
+          - { name: image, label: 图片, type: image, required: false }
       - { name: gallery, label: 画廊, type: image, list: true }
+      - name: next
+        label: 下一项目
+        type: object
+        fields:
+          - { name: title, label: 标题, type: string }
+          - { name: href, label: 链接, type: string }

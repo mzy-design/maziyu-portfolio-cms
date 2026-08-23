@@ -1,1 +1,17 @@
-{"title":"Selected works","intro":"Industrial design, packaging and product development.","projects":[{"title":"Beauty Objects","tags":"Packaging · Product system","image":"images/products/资源 2.png","href":"../work/"},{"title":"Development Study","tags":"Engineering · Prototyping","image":"images/bg-clean.jpg","href":"../work/"},{"title":"Material Ritual","tags":"CMF · Art direction","image":"images/bg-full.jpg","href":"../work/"}]}
+{
+  "title": "Selected works",
+  "intro": "Industrial design, packaging and product development.",
+  "projects": [
+    {"title":"Hourglass","tags":"Beauty packaging","image":"images/projects/hourglass/cover.jpg","href":"hourglass/"},
+    {"title":"WWP Beauty","tags":"Beauty packaging","image":"images/projects/wwp-beauty/cover.jpg","href":"wwp-beauty/"},
+    {"title":"WWP Keychain","tags":"Beauty packaging","image":"images/projects/wwp-keychain/cover.jpg","href":"wwp-keychain/"},
+    {"title":"精准出料","tags":"Beauty packaging","image":"images/projects/precision-dispensing/cover.jpg","href":"precision-dispensing/"},
+    {"title":"Heaven Pink Lipstick","tags":"Beauty packaging","image":"images/projects/heaven-pink-lipstick/cover.jpg","href":"heaven-pink-lipstick/"},
+    {"title":"Heaven Pink Palette","tags":"Beauty packaging","image":"images/projects/heaven-pink-palette/cover.jpg","href":"heaven-pink-palette/"},
+    {"title":"Rare Beauty","tags":"Beauty packaging","image":"images/projects/rare-beauty/cover.webp","href":"rare-beauty/"},
+    {"title":"Mansion","tags":"Beauty packaging","image":"images/projects/mansion/cover.webp","href":"mansion/"},
+    {"title":"Schwan","tags":"Beauty packaging","image":"images/projects/schwan/cover.webp","href":"schwan/"},
+    {"title":"Mario","tags":"Beauty packaging · Motion","image":"images/projects/mario/cover.gif","href":"mario/"},
+    {"title":"Zhiben","tags":"Beauty packaging","image":"images/projects/zhiben/cover.webp","href":"zhiben/"}
+  ]
+}
