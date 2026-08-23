@@ -3,7 +3,7 @@
   "email": "358302845@qq.com",
   "copyLabel": "Copy Mail",
   "wechatLabel": "WeChat",
-  "wechatImage": "",
+  "wechatImage": "images/wechat-qr.webp",
   "wechatPlaceholder": "在 CMS 上传微信二维码",
   "socials": []
 }
