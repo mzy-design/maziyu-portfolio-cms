@@ -56,13 +56,16 @@ content:
           - { name: en, label: 英文翻译, type: text, list: true }
           - { name: portrait, label: 竖版图片, type: image, required: false }
           - { name: detailImage, label: 横版图片, type: image, required: false }
+      - { name: experienceIntro, label: Experience 解释文案, type: text }
       - name: experience
         label: 工作经历
         type: object
         list: true
         fields:
-          - { name: company, label: 公司, type: string }
-          - { name: role, label: 职位, type: string }
+          - { name: companyZh, label: 公司中文名, type: string }
+          - { name: companyEn, label: 公司英文名, type: string }
+          - { name: roleZh, label: 职位中文名, type: string }
+          - { name: roleEn, label: 职位英文名, type: string }
           - { name: years, label: 时间, type: string }
           - { name: en, label: 英文说明, type: text }
           - { name: zh, label: 中文说明, type: text }
