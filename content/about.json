@@ -1,38 +1,124 @@
 {
-  "kicker": "About",
-  "title": "从品牌需求到量产落地，建立兼具识别度、功能与商业价值的产品体验。",
-  "intro": [
-    "我是马子煜（Iven），一名常驻上海的工业与包装设计师，拥有 3 年以上产品、工业与包装设计经验，聚焦美妆个护包装、品牌产品设计与结构落地。",
-    "我擅长将品牌需求转化为可生产的产品语言，覆盖概念与 CMF、结构协同、打样测试、开模跟进与量产交付，并持续探索 AI 在概念生成、方案表达与设计提效中的应用。"
-  ],
-  "portrait": "images/about/portrait.jpg",
+  "hero": {
+    "identityEn": "Beauty Product & Packaging Designer",
+    "identityZh": "美妆产品与包装设计师",
+    "statementEn": "Beauty products, shaped from concept to production.",
+    "statementZh": "从概念到量产，塑造兼具体验、品牌与制造逻辑的美妆产品。",
+    "locationEn": "Based in Shanghai",
+    "locationZh": "常驻上海",
+    "scopeEn": "Working across product, packaging, CMF and production development.",
+    "scopeZh": "专注产品、包装、CMF 与量产开发。"
+  },
+  "introduction": {
+    "heading": "About",
+    "en": [
+      "I'm Ma Ziyu, a beauty product and packaging designer based in Shanghai.",
+      "My work spans product form, packaging structure, CMF and production development, with experience across both global packaging suppliers and beauty brands.",
+      "I approach design as a process that connects ideas with reality — translating brand needs into tangible products through concept development, structural collaboration, prototyping and production.",
+      "Having worked across 30+ beauty and personal care projects, I’m particularly interested in how small interactions, materials and manufacturing details can shape the way a product is understood and experienced."
+    ],
+    "zh": [
+      "我是马子煜，一名常驻上海的美妆产品与包装设计师。",
+      "我的工作覆盖产品造型、包装结构、CMF 与量产开发，并拥有国际美妆包装供应商与品牌方两侧的工作经验。",
+      "我更习惯把设计理解为一个连接想法与现实的过程：从品牌需求出发，通过概念设计、结构协同、打样验证与生产推进，将想法转化为真正能够被使用和制造的产品。",
+      "参与 30+ 美妆与个护项目的过程中，我尤其关注微小的使用动作、材料与制造细节如何共同影响一个产品被理解、被触碰和被使用的方式。"
+    ]
+  },
   "experience": [
     {
-      "company": "天下秀集团（HEAVEN PINK）",
-      "role": "产品设计师",
-      "period": "2025.11 — 2026.07",
-      "summary": "建立品牌产品语言，统筹产品、包装与上市视觉，并推进冰熨斗妆前精华乳、轻润柔雾多用棒及面部综合盘的设计与落地。"
+      "company": "HEAVEN PINK",
+      "role": "Product Designer",
+      "years": "2025–2026",
+      "en": "Working from the brand side across beauty product design, packaging and visual systems, with a focus on building a more consistent product language from concept through launch.",
+      "zh": "从品牌侧参与美妆产品、包装及视觉体系设计，重点建立更统一的产品语言，并推动设计从概念开发延伸至上市呈现。"
     },
     {
-      "company": "WWP Beauty",
-      "role": "设计工程师",
-      "period": "2023.03 — 2025.11",
-      "summary": "服务至本、且初、Rare Beauty、Haus Labs、HOURGLASS 等品牌，参与 30+ 项目，并在 15+ 项目中承担项目管理职责，覆盖需求拆解、设计提案、样品验证、开模与量产交付。"
+      "company": "WWP BEAUTY",
+      "role": "Design Engineer",
+      "years": "2023–2025",
+      "en": "Developed beauty packaging for global and Chinese brands across concept design, CMF, structural development, prototyping and production, contributing to 30+ projects from early exploration to manufacturing.",
+      "zh": "参与国内外美妆品牌包装开发，覆盖概念设计、CMF、结构开发、打样与量产，在 30+ 项目中积累从前期探索到制造落地的完整经验。"
     },
     {
-      "company": "北京环球音像出版社",
-      "role": "视觉平面设计师",
-      "period": "2020.08 — 2022.11",
-      "summary": "完成 10+ 专辑及周边项目，负责封面、唱片包装、宣传物料与陈列延展，并协调印刷、材料、成本及供应商交付。"
+      "company": "UNIVERSAL AUDIO & VIDEO PUBLISHING",
+      "role": "Visual Designer",
+      "years": "2020–2022",
+      "en": "Designed album packaging and visual systems across print, physical media and promotional applications, building an early foundation in graphic systems, materials and production.",
+      "zh": "负责唱片包装及视觉系统设计，覆盖印刷、实体媒介与宣传延展，由此建立对平面系统、材料与生产工艺的早期理解。"
     }
   ],
-  "education": [
+  "brands": {
+    "names": ["Rare Beauty", "HOURGLASS", "Haus Labs", "Schwan Cosmetics", "MUZIGAE MANSION", "ZHIBEN / 至本", "KIMTRUE / 且初", "Amway"],
+    "noteEn": "Selected brands and projects contributed to during my work at WWP Beauty.",
+    "noteZh": "部分品牌及项目来自 WWP Beauty 任职期间参与的设计与开发工作。"
+  },
+  "capabilities": [
     {
-      "school": "西南石油大学",
-      "major": "工业设计 · 本科",
-      "period": "2017.09 — 2021.07",
-      "detail": "双一流院校 · 国家励志奖学金 · 优秀毕业生"
+      "titleEn": "Product & Packaging Design",
+      "titleZh": "产品与包装设计",
+      "en": "From product form and packaging architecture to applicators and interaction details, I develop beauty products around both brand identity and everyday use.",
+      "zh": "从产品造型、包装结构到涂抹器与交互细节，以品牌识别与真实使用体验为出发点构建设计方案。",
+      "keywords": ["Concept Development", "Form Exploration", "Packaging Architecture", "Applicator Design", "User Interaction"]
+    },
+    {
+      "titleEn": "CMF & Product Language",
+      "titleZh": "CMF 与产品语言",
+      "en": "I build coherent product families through colour, material, finish and detail, translating brand identity into a physical design language.",
+      "zh": "通过色彩、材料、表面处理与细节规则建立统一的产品家族，将品牌语言转化为可感知的实体产品语言。",
+      "keywords": ["CMF Strategy", "Colour Systems", "Material Selection", "Surface Finishing", "Product Family Design"]
+    },
+    {
+      "titleEn": "Structure & Development",
+      "titleZh": "结构与开发",
+      "en": "I work closely with engineers and suppliers to move concepts beyond visuals, balancing design intent with structure, tooling, cost and manufacturing constraints.",
+      "zh": "与结构工程师及供应商协同推进设计，在设计意图、结构、模具、成本与制造限制之间寻找可执行的平衡。",
+      "keywords": ["Structural Collaboration", "Tooling Development", "Prototype Review", "Design for Manufacturing", "Supplier Communication"]
+    },
+    {
+      "titleEn": "Production & Delivery",
+      "titleZh": "打样与量产落地",
+      "en": "From prototypes and colour samples to production-ready details, I follow designs through iteration and validation to help ensure the final product retains its original intent.",
+      "zh": "从模型、颜色样到量产细节，通过多轮打样、验证与调整持续推进方案，使最终产品尽可能保留最初的设计意图。",
+      "keywords": ["Sampling", "Colour Matching", "Finish Validation", "Production Follow-up", "Quality Review"]
     }
   ],
-  "languages": ["IELTS 6.5", "CET-6 520", "英语可作为工作语言"]
+  "process": [
+    {"stageEn": "Understand", "stageZh": "理解", "keywordsEn": "Brand / User / Market", "keywordsZh": "品牌 / 用户 / 市场"},
+    {"stageEn": "Explore", "stageZh": "探索", "keywordsEn": "Concept / Form / Interaction", "keywordsZh": "概念 / 造型 / 交互"},
+    {"stageEn": "Define", "stageZh": "定义", "keywordsEn": "CMF / Product Language", "keywordsZh": "CMF / 产品语言"},
+    {"stageEn": "Develop", "stageZh": "开发", "keywordsEn": "Structure / Engineering / Tooling", "keywordsZh": "结构 / 工程 / 开模"},
+    {"stageEn": "Validate", "stageZh": "验证", "keywordsEn": "Prototype / Sample / Testing", "keywordsZh": "模型 / 打样 / 测试"},
+    {"stageEn": "Produce", "stageZh": "量产", "keywordsEn": "Manufacturing / Delivery", "keywordsZh": "制造 / 交付"}
+  ],
+  "processStatementEn": "Design doesn't stop when the rendering is finished.",
+  "processStatementZh": "对我而言，设计并不会在效果图完成时结束。",
+  "bring": [
+    {"titleEn": "Beauty Focus", "titleZh": "美妆行业经验", "en": "Experience across beauty products, packaging, applicators and production gives me a practical understanding of how the category works beyond appearance.", "zh": "长期围绕美妆产品、包装、涂抹器及生产开发工作，让我对这一品类的理解不仅停留在外观层面。"},
+    {"titleEn": "Design + Engineering", "titleZh": "设计 × 工程", "en": "I move comfortably between visual ideas and technical constraints, helping concepts survive the transition from presentation to production.", "zh": "能够在视觉设计与工程限制之间切换，让概念不仅在提案中成立，也能够经受从设计到生产的转换。"},
+    {"titleEn": "Brand + Supplier Perspective", "titleZh": "品牌 × 供应商视角", "en": "Experience on both supplier and brand sides helps me understand the different priorities behind design, engineering, sourcing and launch.", "zh": "品牌方与供应商两侧的工作经历，让我能够理解设计、工程、采购与上市过程中不同角色的判断逻辑。"},
+    {"titleEn": "Detail Matters", "titleZh": "细节意识", "en": "I pay attention to the small decisions — a radius, a click, a surface transition or a colour shift — because these details often define how a product ultimately feels.", "zh": "我关注那些看似微小的决定：一个圆角、一次开合、一处分面或一点色差，因为最终决定产品质感的，往往正是这些细节。"}
+  ],
+  "values": [
+    {"titleEn": "Clarity", "titleZh": "清晰", "en": "Remove what doesn't need to be there.", "zh": "去掉不必要的设计，让产品表达更加直接。"},
+    {"titleEn": "Restraint", "titleZh": "克制", "en": "Let proportion, material and detail speak before decoration.", "zh": "让比例、材料与细节先于装饰表达。"},
+    {"titleEn": "Realisation", "titleZh": "落地", "en": "A good idea becomes meaningful when it survives reality.", "zh": "好的想法，需要经得住现实世界的制造与使用。"}
+  ],
+  "recognition": [
+    {"title": "iF New Talent Award 2020", "result": "", "en": "Sustainable design concept exploring agricultural material reuse.", "zh": "以农业材料再利用为核心的可持续设计方案。"},
+    {"title": "National College Industrial Design Competition", "result": "Second Prize", "en": "Smart food container concept.", "zh": "智能餐盒设计。"},
+    {"title": "5+ Patent Applications", "result": "", "en": "Across product and packaging development.", "zh": "覆盖产品与包装开发。"}
+  ],
+  "tools": [
+    {"group": "Design", "items": ["Rhino", "KeyShot", "Blender", "Photoshop", "Illustrator"]},
+    {"group": "Development", "items": ["CMF", "Packaging Structure", "Prototyping", "Tooling Development", "Production Follow-up"]},
+    {"group": "Digital & AI", "items": ["AI-assisted Concept Exploration", "Midjourney", "Vibe Coding", "HTML / CSS", "GitHub"]}
+  ],
+  "cta": {
+    "titleEn": "Let's make ideas tangible.",
+    "titleZh": "让想法成为真实的产品。",
+    "bodyEn": ["I'm interested in beauty products, packaging systems and the small interactions that make everyday objects feel considered.", "Currently open to product and packaging design opportunities in China and internationally."],
+    "bodyZh": ["持续关注美妆产品、包装系统，以及那些让日常物件变得更值得使用的微小交互。", "目前开放中国及海外的美妆产品与包装设计机会。"],
+    "labelEn": "Get in touch ↗",
+    "labelZh": "联系我 ↗"
+  }
 }

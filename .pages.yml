@@ -47,10 +47,25 @@ content:
     path: content/about.json
     format: json
     fields:
-      - { name: kicker, label: 小标题, type: string }
-      - { name: title, label: 主标题, type: text }
-      - { name: intro, label: 简介段落, type: text, list: true }
-      - { name: portrait, label: 个人照片, type: image }
+      - name: hero
+        label: About Hero
+        type: object
+        fields:
+          - { name: identityEn, label: 职业定位（英文）, type: string }
+          - { name: identityZh, label: 职业定位（中文）, type: string }
+          - { name: statementEn, label: 主陈述（英文）, type: text }
+          - { name: statementZh, label: 主陈述（中文）, type: text }
+          - { name: locationEn, label: 地点（英文）, type: string }
+          - { name: locationZh, label: 地点（中文）, type: string }
+          - { name: scopeEn, label: 领域（英文）, type: text }
+          - { name: scopeZh, label: 领域（中文）, type: text }
+      - name: introduction
+        label: About 介绍
+        type: object
+        fields:
+          - { name: heading, label: 标题, type: string }
+          - { name: en, label: 英文段落, type: text, list: true }
+          - { name: zh, label: 中文段落, type: text, list: true }
       - name: experience
         label: 工作经历
         type: object
@@ -58,99 +73,81 @@ content:
         fields:
           - { name: company, label: 公司, type: string }
           - { name: role, label: 职位, type: string }
-          - { name: period, label: 时间, type: string }
-          - { name: summary, label: 经历说明, type: text }
-      - name: education
-        label: 教育经历
+          - { name: years, label: 时间, type: string }
+          - { name: en, label: 英文说明, type: text }
+          - { name: zh, label: 中文说明, type: text }
+      - name: brands
+        label: 合作品牌
+        type: object
+        fields:
+          - { name: names, label: 品牌名称, type: string, list: true }
+          - { name: noteEn, label: 说明（英文）, type: text }
+          - { name: noteZh, label: 说明（中文）, type: text }
+      - name: capabilities
+        label: 核心能力
         type: object
         list: true
         fields:
-          - { name: school, label: 学校, type: string }
-          - { name: major, label: 专业学历, type: string }
-          - { name: period, label: 时间, type: string }
-          - { name: detail, label: 补充信息, type: text }
-      - { name: languages, label: 语言能力, type: string, list: true }
-  - name: sections
-    label: 首页完整板块
-    type: file
-    path: content/sections.json
-    format: json
-    fields:
-      - name: capabilities
-        label: Capabilities
+          - { name: titleEn, label: 标题（英文）, type: string }
+          - { name: titleZh, label: 标题（中文）, type: string }
+          - { name: en, label: 说明（英文）, type: text }
+          - { name: zh, label: 说明（中文）, type: text }
+          - { name: keywords, label: 关键词, type: string, list: true }
+      - name: process
+        label: 从概念到量产
         type: object
+        list: true
         fields:
-          - { name: kicker, label: 小标题, type: string }
-          - { name: intro, label: 简介, type: text }
-          - { name: image, label: 板块图片, type: image, required: false }
-          - name: items
-            label: 能力分类
-            type: object
-            list: true
-            fields:
-              - { name: title, label: 标题, type: string }
-              - { name: description, label: 说明, type: text }
-              - { name: services, label: 服务, type: string, list: true }
-          - { name: tools, label: 工具, type: string, list: true }
-      - name: testimonials
-        label: 评价
+          - { name: stageEn, label: 阶段（英文）, type: string }
+          - { name: stageZh, label: 阶段（中文）, type: string }
+          - { name: keywordsEn, label: 关键词（英文）, type: string }
+          - { name: keywordsZh, label: 关键词（中文）, type: string }
+      - { name: processStatementEn, label: 流程陈述（英文）, type: text }
+      - { name: processStatementZh, label: 流程陈述（中文）, type: text }
+      - name: bring
+        label: 我的价值
         type: object
+        list: true
         fields:
-          - { name: kicker, label: 小标题, type: string }
-          - { name: intro, label: 简介, type: text }
-          - name: items
-            label: 评价条目
-            type: object
-            list: true
-            fields:
-              - { name: name, label: 姓名, type: string }
-              - { name: role, label: 职位, type: string }
-              - { name: quote, label: 评价, type: text }
-              - { name: image, label: 图片, type: image, required: false }
-      - name: awards
-        label: Awards
-        type: object
-        fields:
-          - { name: kicker, label: 小标题, type: string }
-          - name: items
-            label: 奖项
-            type: object
-            list: true
-            fields:
-              - { name: award, label: 奖项, type: string }
-              - { name: recognition, label: 结果, type: string }
-              - { name: project, label: 项目, type: string }
-              - { name: year, label: 年份, type: string }
+          - { name: titleEn, label: 标题（英文）, type: string }
+          - { name: titleZh, label: 标题（中文）, type: string }
+          - { name: en, label: 说明（英文）, type: text }
+          - { name: zh, label: 说明（中文）, type: text }
       - name: values
-        label: Values
+        label: 设计原则
         type: object
+        list: true
         fields:
-          - { name: kicker, label: 小标题, type: string }
-          - name: items
-            label: 价值观
-            type: object
-            list: true
-            fields:
-              - { name: title, label: 标题, type: string }
-              - { name: body, label: 说明, type: text }
-      - name: cta
-        label: 行动号召
+          - { name: titleEn, label: 标题（英文）, type: string }
+          - { name: titleZh, label: 标题（中文）, type: string }
+          - { name: en, label: 说明（英文）, type: text }
+          - { name: zh, label: 说明（中文）, type: text }
+      - name: recognition
+        label: 奖项与成果
         type: object
+        list: true
         fields:
           - { name: title, label: 标题, type: string }
-          - { name: href, label: 链接, type: string }
-      - name: footer
-        label: 页脚
+          - { name: result, label: 结果, type: string, required: false }
+          - { name: en, label: 说明（英文）, type: text }
+          - { name: zh, label: 说明（中文）, type: text }
+      - name: tools
+        label: 工具与方法
+        type: object
+        list: true
+        fields:
+          - { name: group, label: 分组, type: string }
+          - { name: items, label: 条目, type: string, list: true }
+      - name: cta
+        label: 联系 CTA
         type: object
         fields:
-          - { name: name, label: 名称, type: string }
-          - name: links
-            label: 链接
-            type: object
-            list: true
-            fields:
-              - { name: label, label: 名称, type: string }
-              - { name: href, label: 链接, type: string }
+          - { name: titleEn, label: 标题（英文）, type: text }
+          - { name: titleZh, label: 标题（中文）, type: text }
+          - { name: bodyEn, label: 正文（英文）, type: text, list: true }
+          - { name: bodyZh, label: 正文（中文）, type: text, list: true }
+          - { name: labelEn, label: 按钮（英文）, type: string }
+          - { name: labelZh, label: 按钮（中文）, type: string }
   - name: contact
     label: 联系
     type: file
