@@ -129,6 +129,7 @@ content:
         fields:
           - { name: title, label: 标题, type: string }
           - { name: result, label: 结果, type: string, required: false }
+          - { name: year, label: 年份, type: string, required: false }
           - { name: en, label: 说明（英文）, type: text }
           - { name: zh, label: 说明（中文）, type: text }
       - name: tools
