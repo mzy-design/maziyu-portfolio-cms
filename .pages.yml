@@ -57,6 +57,7 @@ content:
           - { name: portrait, label: 竖版图片, type: image, required: false }
           - { name: detailImage, label: 横版图片, type: image, required: false }
       - { name: experienceIntro, label: Experience 解释文案, type: text }
+      - { name: experienceImage, label: Experience 左侧图片, type: image, required: false }
       - name: experience
         label: 工作经历
         type: object
