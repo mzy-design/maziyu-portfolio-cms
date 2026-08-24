@@ -20,7 +20,7 @@
     <section class="about-experience"><header><h2>Experience</h2><p>${esc(p.experienceIntro)}</p>${p.experienceImage ? `<img class="experience-image" src="${esc(asset(p.experienceImage))}" alt="WWP Beauty product design" loading="lazy">` : ''}</header><div class="experience-capabilities">${p.experience.map(item => `<article class="experience-capability"><div class="experience-title-row"><div class="experience-company"><div class="experience-reveal"><h3 lang="zh-CN">${esc(item.companyZh)}</h3></div><small>${esc(item.companyEn)}</small></div><div class="experience-role"><strong lang="zh-CN">${esc(item.roleZh)}</strong><small>${esc(item.roleEn)}</small><time>${esc(item.years)}</time></div></div><div class="experience-copy"><p class="zh" lang="zh-CN">${esc(item.zh)}</p><p class="en">${esc(item.en)}</p></div></article>`).join('')}</div><div class="experience-partners"><h2>Clients <span lang="zh-CN">/ 合作品牌</span></h2><div class="partner-marquee"><div class="partner-track">${[...p.brands.logos,...p.brands.logos].map(logo => `<span class="partner-logo"><img src="${esc(asset(logo.image))}" alt="${esc(logo.name)}" loading="lazy"></span>`).join('')}</div></div></div></section>
     <section class="about-awards"><div class="awards-inner"><h2>Awards &amp;<br>Recognitions</h2><div class="awards-grid">${p.recognition.map((item, index) => `<article class="award-card" style="--i:${index}"><header><h3>${esc(item.title)}</h3>${item.result ? `<strong>( ${esc(item.result)} )</strong>` : ''}</header><div class="award-copy"><p>${esc(item.en)}</p><p lang="zh-CN">${esc(item.zh)}</p></div>${item.year ? `<time>${esc(item.year)}</time>` : ''}</article>`).join('')}</div></div></section>
     <section class="about-showcase">${media(p.showcaseImage, 'Cosmetic applicator structure development')}</section>
-    <section class="about-fan" aria-label="Drag to browse selected project images"><span class="fan-plus fan-plus-left" aria-hidden="true">＋</span><span class="fan-plus fan-plus-right" aria-hidden="true">＋</span><div class="fan-deck"><div class="fan-row" data-step="${360 / fanItems.length}" tabindex="0" aria-label="Drag horizontally or use arrow keys to browse projects">${fanItems.map((item, index) => `<figure class="fan-card" style="--angle:${index * 360 / fanItems.length}deg"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" draggable="false"></figure>`).join('')}</div></div></section>
+    <section class="about-fan" aria-label="Drag to browse selected project images"><span class="fan-plus fan-plus-left" aria-hidden="true">＋</span><span class="fan-plus fan-plus-right" aria-hidden="true">＋</span><div class="fan-deck"><div class="fan-row" tabindex="0" aria-label="Drag horizontally or use arrow keys to browse projects">${fanItems.map(item => `<figure class="fan-card"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" draggable="false"></figure>`).join('')}</div></div></section>
     <section class="about-values"><p class="values-label">( VALUES )</p><span class="values-line" aria-hidden="true"></span><div class="values-list">${p.values.map(item => `<h2>${esc(item.titleEn)}</h2>`).join('')}</div><a class="values-chat" href="${base}/contact/"><img src="${esc(asset(p.introduction.portrait))}" alt="Ma Ziyu"><span>Let's chat</span></a><span class="values-plus values-plus-left" aria-hidden="true">＋</span><span class="values-plus values-plus-right" aria-hidden="true">＋</span></section>
     <section class="about-process about-combined"><header class="about-feature-head"><p>Capabilities &amp; Process</p><h2>From Concept to Production<span lang="zh-CN">从概念到量产</span></h2></header><ol>${p.process.map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.stageEn)}<small lang="zh-CN">${esc(item.stageZh)}</small></h3><p>${esc(item.keywordsEn)}<small lang="zh-CN">${esc(item.keywordsZh)}</small></p></li>`).join('')}</ol></section>
     <section class="about-closing"><h2>${esc(p.cta.titleEn)}<span lang="zh-CN">${esc(p.cta.titleZh)}</span></h2><footer><a href="${base}/contact/">${esc(p.cta.labelEn)}</a><a href="${base}/contact/">${esc(p.cta.labelZh)}</a></footer></section>
@@ -51,37 +51,45 @@
     const fan = document.querySelector('.about-fan');
     const fanRow = fan?.querySelector('.fan-row');
     if (fanRow) {
-      const step = Number(fanRow.dataset.step);
-      let rotation = step / 2, startX = 0, startRotation = 0, lastX = 0, lastTime = 0, velocity = 0, dragging = false;
+      const cards = [...fanRow.querySelectorAll('.fan-card')], count = cards.length;
+      let position = .5, startX = 0, startPosition = 0, lastX = 0, lastTime = 0, velocity = 0, dragging = false;
       const renderFan = animate => {
-        fanRow.style.transition = animate ? 'transform .65s cubic-bezier(.22,1,.36,1), opacity .7s' : 'opacity .7s';
-        fanRow.style.transform = `translate(-50%,-50%) rotateY(${rotation}deg)`;
+        fanRow.classList.toggle('is-settling', animate);
+        const width = fanRow.clientWidth, cardWidth = Math.min(340, width * .29), gap = Math.min(105, width * .072);
+        cards.forEach((card, index) => {
+          let offset = ((index - position + count / 2) % count + count) % count - count / 2;
+          const distance = Math.abs(offset), side = Math.sign(offset) || 1;
+          const x = side * (16 + Math.max(0, distance - .5) * gap);
+          const angle = side * -(82 - Math.min(4, Math.max(0, distance - .5)) * 19);
+          card.style.cssText = `--card-width:${cardWidth}px;z-index:${100 - Math.round(distance * 10)};opacity:${distance > 5.6 ? 0 : 1};transform:translate(-50%,-50%) translateX(${x}px) translateZ(${52 - distance * 18}px) rotateY(${angle}deg)`;
+        });
       };
       renderFan(false);
       fanRow.addEventListener('pointerdown', event => {
-        dragging = true; startX = lastX = event.clientX; startRotation = rotation; lastTime = performance.now(); velocity = 0;
+        dragging = true; startX = lastX = event.clientX; startPosition = position; lastTime = performance.now(); velocity = 0;
         fanRow.setPointerCapture(event.pointerId); fanRow.classList.add('is-dragging');
       });
       fanRow.addEventListener('pointermove', event => {
         if (!dragging) return;
         const now = performance.now(), elapsed = Math.max(1, now - lastTime);
-        velocity = (event.clientX - lastX) / elapsed * .18;
-        rotation = startRotation + (event.clientX - startX) * .18;
+        velocity = (event.clientX - lastX) / elapsed / 125;
+        position = startPosition - (event.clientX - startX) / 125;
         lastX = event.clientX; lastTime = now; renderFan(false);
       });
       const finishFanDrag = () => {
         if (!dragging) return;
         dragging = false; fanRow.classList.remove('is-dragging');
-        rotation += velocity * 140;
-        rotation = step / 2 + Math.round((rotation - step / 2) / step) * step;
+        position -= velocity * 130;
+        position = Math.round(position - .5) + .5;
         renderFan(true);
       };
       fanRow.addEventListener('pointerup', finishFanDrag);
       fanRow.addEventListener('pointercancel', finishFanDrag);
       fanRow.addEventListener('keydown', event => {
         if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
-        event.preventDefault(); rotation += event.key === 'ArrowLeft' ? step : -step; renderFan(true);
+        event.preventDefault(); position += event.key === 'ArrowLeft' ? -1 : 1; renderFan(true);
       });
+      addEventListener('resize', () => renderFan(false), { passive: true });
     }
     const lightSections = document.querySelectorAll('.home-projects, .about-showcase, .about-fan, .about-values');
     const updateAboutScroll = () => {
