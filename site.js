@@ -53,15 +53,23 @@
     if (fanRow) {
       const cards = [...fanRow.querySelectorAll('.fan-card')], count = cards.length;
       let position = .5, startX = 0, startPosition = 0, lastX = 0, lastTime = 0, velocity = 0, dragging = false;
+      const interpolate = (value, points) => {
+        const bounded = Math.max(0, Math.min(points.length - 1, value));
+        const index = Math.min(points.length - 2, Math.floor(bounded));
+        return points[index] + (points[index + 1] - points[index]) * (bounded - index);
+      };
       const renderFan = animate => {
         fanRow.classList.toggle('is-settling', animate);
-        const width = fanRow.clientWidth, cardWidth = Math.min(340, width * .29), gap = Math.min(105, width * .072);
+        const width = fanRow.clientWidth, cardWidth = Math.min(600, width * .308);
         cards.forEach((card, index) => {
           let offset = ((index - position + count / 2) % count + count) % count - count / 2;
           const distance = Math.abs(offset), side = Math.sign(offset) || 1;
-          const x = side * (16 + Math.max(0, distance - .5) * gap);
-          const angle = side * -(82 - Math.min(4, Math.max(0, distance - .5)) * 19);
-          card.style.cssText = `--card-width:${cardWidth}px;z-index:${100 - Math.round(distance * 10)};opacity:${distance > 5.6 ? 0 : 1};transform:translate(-50%,-50%) translateX(${x}px) translateZ(${52 - distance * 18}px) rotateY(${angle}deg)`;
+          const layer = Math.max(0, distance - .5);
+          const centerRatio = Math.min(1, distance / .5);
+          const x = distance < .5 ? offset * width * .12 : side * width * interpolate(layer, [.06,.145,.173,.19,.205,.22]);
+          const angle = distance < .5 ? -offset * 140 : side * -interpolate(layer, [70,35,12,4,0,0]);
+          const heightScale = interpolate(layer, [1,.94,.8,.73,.7,.68]);
+          card.style.cssText = `--card-width:${cardWidth}px;z-index:${100 - Math.round(distance * 10)};opacity:${distance > 3.6 ? 0 : 1};transform:translate(-50%,-50%) translateX(${x}px) rotateY(${angle * centerRatio}deg) scaleY(${heightScale})`;
         });
       };
       renderFan(false);
@@ -72,8 +80,9 @@
       fanRow.addEventListener('pointermove', event => {
         if (!dragging) return;
         const now = performance.now(), elapsed = Math.max(1, now - lastTime);
-        velocity = (event.clientX - lastX) / elapsed / 125;
-        position = startPosition - (event.clientX - startX) / 125;
+        const unit = Math.min(180, fanRow.clientWidth * .13);
+        velocity = (event.clientX - lastX) / elapsed / unit;
+        position = startPosition - (event.clientX - startX) / unit;
         lastX = event.clientX; lastTime = now; renderFan(false);
       });
       const finishFanDrag = () => {
