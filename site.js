@@ -6,7 +6,7 @@
     return response.json();
   });
   const p = await getJson(window.CONTENT_PATH);
-  const about = page === 'home' ? await getJson(`${base}/content/about.json?v=20260824m`) : p;
+  const about = page === 'home' ? await getJson(`${base}/content/about.json?v=20260824n`) : p;
   const root = document.querySelector('#app');
   const esc = value => String(value ?? '').replace(/[&<>\"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
   const asset = path => /^(https?:|data:|\/)/.test(path) ? path : `${base}/${String(path).replace(/^\.\.\//, '')}`;
