@@ -6,20 +6,21 @@
     return response.json();
   });
   const p = await getJson(window.CONTENT_PATH);
-  const about = page === 'home' ? await getJson(`${base}/content/about.json?v=20260824l`) : p;
+  const about = page === 'home' ? await getJson(`${base}/content/about.json?v=20260824m`) : p;
   const root = document.querySelector('#app');
   const esc = value => String(value ?? '').replace(/[&<>\"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
   const asset = path => /^(https?:|data:|\/)/.test(path) ? path : `${base}/${String(path).replace(/^\.\.\//, '')}`;
   const media = (path, alt = '', className = '') => path
     ? `<img class="${className}" src="${esc(asset(path))}" alt="${esc(alt)}" loading="lazy">`
     : `<div class="media-placeholder ${className}" role="img" aria-label="图片占位符"><span>Image placeholder</span></div>`;
+  const fanItems = about.carousel.length % 2 ? [...about.carousel, about.carousel[0]] : about.carousel;
 
   const aboutSectionsHtml = (page === 'about' || page === 'home') ? ((p) => `
     <section class="about-opening"><header><h1>${esc(about.introduction.heading)}</h1></header><div class="about-primary zh" lang="zh-CN">${about.introduction.zh.map(text => `<p>${esc(text)}</p>`).join('')}</div><div class="about-media-row"><div class="about-translation">${about.introduction.en.map(text => `<p>${esc(text)}</p>`).join('')}</div>${media(about.introduction.portrait, 'Ma Ziyu portrait', 'about-portrait')}${media(about.introduction.detailImage, 'Design detail', 'about-detail')}</div></section>
     <section class="about-experience"><header><h2>Experience</h2><p>${esc(p.experienceIntro)}</p>${p.experienceImage ? `<img class="experience-image" src="${esc(asset(p.experienceImage))}" alt="WWP Beauty product design" loading="lazy">` : ''}</header><div class="experience-capabilities">${p.experience.map(item => `<article class="experience-capability"><div class="experience-title-row"><div class="experience-company"><div class="experience-reveal"><h3 lang="zh-CN">${esc(item.companyZh)}</h3></div><small>${esc(item.companyEn)}</small></div><div class="experience-role"><strong lang="zh-CN">${esc(item.roleZh)}</strong><small>${esc(item.roleEn)}</small><time>${esc(item.years)}</time></div></div><div class="experience-copy"><p class="zh" lang="zh-CN">${esc(item.zh)}</p><p class="en">${esc(item.en)}</p></div></article>`).join('')}</div><div class="experience-partners"><h2>Clients <span lang="zh-CN">/ 合作品牌</span></h2><div class="partner-marquee"><div class="partner-track">${[...p.brands.logos,...p.brands.logos].map(logo => `<span class="partner-logo"><img src="${esc(asset(logo.image))}" alt="${esc(logo.name)}" loading="lazy"></span>`).join('')}</div></div></div></section>
     <section class="about-awards"><div class="awards-inner"><h2>Awards &amp;<br>Recognitions</h2><div class="awards-grid">${p.recognition.map((item, index) => `<article class="award-card" style="--i:${index}"><header><h3>${esc(item.title)}</h3>${item.result ? `<strong>( ${esc(item.result)} )</strong>` : ''}</header><div class="award-copy"><p>${esc(item.en)}</p><p lang="zh-CN">${esc(item.zh)}</p></div>${item.year ? `<time>${esc(item.year)}</time>` : ''}</article>`).join('')}</div></div></section>
     <section class="about-showcase">${media(p.showcaseImage, 'Cosmetic applicator structure development')}</section>
-    <section class="about-fan" aria-label="Selected project images"><div class="fan-deck">${p.carousel.map((item, index) => `<figure class="fan-card" style="--offset:${index - (p.carousel.length - 1) / 2};--depth:${Math.abs(index - (p.carousel.length - 1) / 2)};--i:${index}"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" loading="lazy"></figure>`).join('')}</div></section>
+    <section class="about-fan" aria-label="Selected project images"><div class="fan-deck"><div class="fan-row">${fanItems.map((item, index) => { const offset = index - (fanItems.length - 1) / 2; const angle = (offset < 0 ? 1 : -1) * Math.max(5, 74 - Math.abs(offset) * 14); return `<figure class="fan-card fan-card-${offset < 0 ? 'left' : 'right'}" style="--angle:${angle}deg;--depth:${Math.abs(offset)};--i:${index}"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" loading="lazy"></figure>`; }).join('')}</div></div></section>
     <section class="about-values"><p class="values-label">( VALUES )</p><span class="values-line" aria-hidden="true"></span><div class="values-list">${p.values.map(item => `<h2>${esc(item.titleEn)}</h2>`).join('')}</div><a class="values-chat" href="${base}/contact/"><img src="${esc(asset(p.introduction.portrait))}" alt="Ma Ziyu"><span>Let's chat</span></a><span class="values-plus values-plus-left" aria-hidden="true">＋</span><span class="values-plus values-plus-right" aria-hidden="true">＋</span></section>
     <section class="about-process about-combined"><header class="about-feature-head"><p>Capabilities &amp; Process</p><h2>From Concept to Production<span lang="zh-CN">从概念到量产</span></h2></header><ol>${p.process.map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.stageEn)}<small lang="zh-CN">${esc(item.stageZh)}</small></h3><p>${esc(item.keywordsEn)}<small lang="zh-CN">${esc(item.keywordsZh)}</small></p></li>`).join('')}</ol></section>
     <section class="about-closing"><h2>${esc(p.cta.titleEn)}<span lang="zh-CN">${esc(p.cta.titleZh)}</span></h2><footer><a href="${base}/contact/">${esc(p.cta.labelEn)}</a><a href="${base}/contact/">${esc(p.cta.labelZh)}</a></footer></section>
@@ -47,12 +48,18 @@
     }
     const navElement = document.querySelector('.nav');
     const showcase = document.querySelector('.about-showcase');
+    const fan = document.querySelector('.about-fan');
     const lightSections = document.querySelectorAll('.home-projects, .about-showcase, .about-fan, .about-values');
     const updateAboutScroll = () => {
       if (showcase) {
         const bounds = showcase.getBoundingClientRect();
         const progress = Math.max(0, Math.min(1, -bounds.top / Math.max(1, bounds.height - innerHeight)));
         showcase.style.setProperty('--progress', progress);
+      }
+      if (fan) {
+        const bounds = fan.getBoundingClientRect();
+        const progress = Math.max(0, Math.min(1, (innerHeight - bounds.top) / (innerHeight * .65)));
+        fan.style.setProperty('--fan-progress', progress);
       }
       navElement.classList.toggle('over-projects', [...lightSections].some(section => {
       const bounds = section.getBoundingClientRect();
