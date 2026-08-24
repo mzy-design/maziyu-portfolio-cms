@@ -65,11 +65,11 @@
           let offset = ((index - position + count / 2) % count + count) % count - count / 2;
           const distance = Math.abs(offset), side = Math.sign(offset) || 1;
           const layer = Math.max(0, distance - .5);
-          const centerRatio = Math.min(1, distance / .5);
           const x = distance < .5 ? offset * width * .12 : side * width * interpolate(layer, [.06,.145,.173,.19,.205,.22]);
-          const angle = distance < .5 ? -offset * 140 : side * -interpolate(layer, [70,35,12,4,0,0]);
+          const tilt = interpolate(layer, [70,35,12,4,0,0]);
+          const angle = distance < .5 ? -90 + offset * 40 : side < 0 ? -(180 - tilt) : -tilt;
           const heightScale = interpolate(layer, [1,.94,.8,.73,.7,.68]);
-          card.style.cssText = `--card-width:${cardWidth}px;z-index:${100 - Math.round(distance * 10)};opacity:${distance > 3.6 ? 0 : 1};transform:translate(-50%,-50%) translateX(${x}px) rotateY(${angle * centerRatio}deg) scaleY(${heightScale})`;
+          card.style.cssText = `--card-width:${cardWidth}px;z-index:${100 - Math.round(distance * 10)};opacity:${distance > 3.6 ? 0 : 1};transform:translate(-50%,-50%) translateX(${x}px) rotateY(${angle}deg) scaleY(${heightScale})`;
         });
       };
       renderFan(false);
