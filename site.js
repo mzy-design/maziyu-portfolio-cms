@@ -6,7 +6,7 @@
     return response.json();
   });
   const p = await getJson(window.CONTENT_PATH);
-  const about = page === 'home' ? await getJson(`${base}/content/about.json?v=20260824k`) : p;
+  const about = page === 'home' ? await getJson(`${base}/content/about.json?v=20260824l`) : p;
   const root = document.querySelector('#app');
   const esc = value => String(value ?? '').replace(/[&<>\"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
   const asset = path => /^(https?:|data:|\/)/.test(path) ? path : `${base}/${String(path).replace(/^\.\.\//, '')}`;
@@ -19,10 +19,10 @@
     <section class="about-experience"><header><h2>Experience</h2><p>${esc(p.experienceIntro)}</p>${p.experienceImage ? `<img class="experience-image" src="${esc(asset(p.experienceImage))}" alt="WWP Beauty product design" loading="lazy">` : ''}</header><div class="experience-capabilities">${p.experience.map(item => `<article class="experience-capability"><div class="experience-title-row"><div class="experience-company"><div class="experience-reveal"><h3 lang="zh-CN">${esc(item.companyZh)}</h3></div><small>${esc(item.companyEn)}</small></div><div class="experience-role"><strong lang="zh-CN">${esc(item.roleZh)}</strong><small>${esc(item.roleEn)}</small><time>${esc(item.years)}</time></div></div><div class="experience-copy"><p class="zh" lang="zh-CN">${esc(item.zh)}</p><p class="en">${esc(item.en)}</p></div></article>`).join('')}</div><div class="experience-partners"><h2>Clients <span lang="zh-CN">/ 合作品牌</span></h2><div class="partner-marquee"><div class="partner-track">${[...p.brands.logos,...p.brands.logos].map(logo => `<span class="partner-logo"><img src="${esc(asset(logo.image))}" alt="${esc(logo.name)}" loading="lazy"></span>`).join('')}</div></div></div></section>
     <section class="about-awards"><div class="awards-inner"><h2>Awards &amp;<br>Recognitions</h2><div class="awards-grid">${p.recognition.map((item, index) => `<article class="award-card" style="--i:${index}"><header><h3>${esc(item.title)}</h3>${item.result ? `<strong>( ${esc(item.result)} )</strong>` : ''}</header><div class="award-copy"><p>${esc(item.en)}</p><p lang="zh-CN">${esc(item.zh)}</p></div>${item.year ? `<time>${esc(item.year)}</time>` : ''}</article>`).join('')}</div></div></section>
     <section class="about-showcase">${media(p.showcaseImage, 'Cosmetic applicator structure development')}</section>
-    <section class="about-carousel" aria-label="Selected project carousel"><div class="carousel-viewport"><div class="carousel-track">${p.carousel.map((item, index) => `<figure class="carousel-slide"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" loading="lazy"><figcaption><span>${String(index + 1).padStart(2, '0')} / ${String(p.carousel.length).padStart(2, '0')}</span>${esc(item.title)}</figcaption></figure>`).join('')}</div></div><footer><p>Selected projects</p><div><button class="carousel-prev" type="button" aria-label="Previous project">←</button><button class="carousel-next" type="button" aria-label="Next project">→</button></div></footer></section>
-    <section class="about-values"><header><p>( 07 ) Values / 设计原则</p></header><div>${p.values.map(item => `<article><h2>${esc(item.titleEn)}<span lang="zh-CN">${esc(item.titleZh)}</span></h2><p>${esc(item.en)}<span lang="zh-CN">${esc(item.zh)}</span></p></article>`).join('')}</div></section>
-    <section class="about-process about-combined"><header class="about-feature-head"><p>Capabilities &amp; Process</p><h2>From Concept to Production<span lang="zh-CN">从概念到量产</span></h2></header><ol>${p.process.map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.stageEn)}<small lang="zh-CN">${esc(item.stageZh)}</small></h3><p>${esc(item.keywordsEn)}<small lang="zh-CN">${esc(item.keywordsZh)}</small></p></li>`).join('')}</ol><div class="combined-capabilities">${p.capabilities.map((item, index) => `<article><h3>${esc(item.titleEn)}</h3><p lang="zh-CN">${esc(item.titleZh)}</p><ul>${item.keywords.map((keyword, itemIndex) => `<li><span>${esc(keyword)}</span><span>${esc(p.tools[index]?.items[itemIndex] || '')}</span></li>`).join('')}</ul></article>`).join('')}</div></section>
-    <section class="about-closing"><a href="${base}/contact/"><h2>${esc(p.cta.titleEn)}<span lang="zh-CN">${esc(p.cta.titleZh)}</span></h2></a></section>
+    <section class="about-fan" aria-label="Selected project images"><div class="fan-deck">${p.carousel.map((item, index) => `<figure class="fan-card" style="--offset:${index - (p.carousel.length - 1) / 2};--depth:${Math.abs(index - (p.carousel.length - 1) / 2)};--i:${index}"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" loading="lazy"></figure>`).join('')}</div></section>
+    <section class="about-values"><p class="values-label">( VALUES )</p><span class="values-line" aria-hidden="true"></span><div class="values-list">${p.values.map(item => `<h2>${esc(item.titleEn)}</h2>`).join('')}</div><a class="values-chat" href="${base}/contact/"><img src="${esc(asset(p.introduction.portrait))}" alt="Ma Ziyu"><span>Let's chat</span></a><span class="values-plus values-plus-left" aria-hidden="true">＋</span><span class="values-plus values-plus-right" aria-hidden="true">＋</span></section>
+    <section class="about-process about-combined"><header class="about-feature-head"><p>Capabilities &amp; Process</p><h2>From Concept to Production<span lang="zh-CN">从概念到量产</span></h2></header><ol>${p.process.map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.stageEn)}<small lang="zh-CN">${esc(item.stageZh)}</small></h3><p>${esc(item.keywordsEn)}<small lang="zh-CN">${esc(item.keywordsZh)}</small></p></li>`).join('')}</ol></section>
+    <section class="about-closing"><h2>${esc(p.cta.titleEn)}<span lang="zh-CN">${esc(p.cta.titleZh)}</span></h2><footer><a href="${base}/contact/">${esc(p.cta.labelEn)}</a><a href="${base}/contact/">${esc(p.cta.labelZh)}</a></footer></section>
   `)(about) : '';
   const aboutPageHtml = `<main class="about-page" id="about">${aboutSectionsHtml}</main>`;
 
@@ -43,23 +43,24 @@
       const experienceObserver = new IntersectionObserver(entries => entries.forEach(entry => {
         if (entry.isIntersecting) { entry.target.classList.add('is-visible'); experienceObserver.unobserve(entry.target); }
       }), { threshold: .2 });
-      document.querySelectorAll('.experience-capability, .award-card, .about-values article, .about-process>ol>li, .about-closing h2').forEach(item => experienceObserver.observe(item));
+      document.querySelectorAll('.experience-capability, .award-card, .about-fan, .values-label, .values-line, .values-list, .values-chat, .about-process>ol>li, .about-closing h2, .about-closing footer').forEach(item => experienceObserver.observe(item));
     }
-    const carousel = document.querySelector('.about-carousel');
-    const track = carousel?.querySelector('.carousel-track');
-    const slides = carousel?.querySelectorAll('.carousel-slide') || [];
-    let carouselIndex = 0;
-    const showSlide = index => { carouselIndex = (index + slides.length) % slides.length; track.style.transform = `translateX(-${carouselIndex * 100}%)`; };
-    carousel?.querySelector('.carousel-prev')?.addEventListener('click', () => showSlide(carouselIndex - 1));
-    carousel?.querySelector('.carousel-next')?.addEventListener('click', () => showSlide(carouselIndex + 1));
     const navElement = document.querySelector('.nav');
-    const lightSections = document.querySelectorAll('.home-projects, .about-showcase, .about-carousel');
-    const setNavTone = () => navElement.classList.toggle('over-projects', [...lightSections].some(section => {
+    const showcase = document.querySelector('.about-showcase');
+    const lightSections = document.querySelectorAll('.home-projects, .about-showcase, .about-fan, .about-values');
+    const updateAboutScroll = () => {
+      if (showcase) {
+        const bounds = showcase.getBoundingClientRect();
+        const progress = Math.max(0, Math.min(1, -bounds.top / Math.max(1, bounds.height - innerHeight)));
+        showcase.style.setProperty('--progress', progress);
+      }
+      navElement.classList.toggle('over-projects', [...lightSections].some(section => {
       const bounds = section.getBoundingClientRect();
       return bounds.top <= 20 && bounds.bottom > 20;
-    }));
-    addEventListener('scroll', setNavTone, { passive: true });
-    setNavTone();
+      }));
+    };
+    addEventListener('scroll', updateAboutScroll, { passive: true });
+    updateAboutScroll();
   }
   if (page === 'contact') {
     const copy = document.querySelector('.copy-mail');
