@@ -6,7 +6,7 @@
     return response.json();
   });
   const p = await getJson(window.CONTENT_PATH);
-  const about = page === 'home' ? await getJson(`${base}/content/about.json?v=20260824j`) : p;
+  const about = page === 'home' ? await getJson(`${base}/content/about.json?v=20260824k`) : p;
   const root = document.querySelector('#app');
   const esc = value => String(value ?? '').replace(/[&<>\"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
   const asset = path => /^(https?:|data:|\/)/.test(path) ? path : `${base}/${String(path).replace(/^\.\.\//, '')}`;
@@ -18,11 +18,11 @@
     <section class="about-opening"><header><h1>${esc(about.introduction.heading)}</h1></header><div class="about-primary zh" lang="zh-CN">${about.introduction.zh.map(text => `<p>${esc(text)}</p>`).join('')}</div><div class="about-media-row"><div class="about-translation">${about.introduction.en.map(text => `<p>${esc(text)}</p>`).join('')}</div>${media(about.introduction.portrait, 'Ma Ziyu portrait', 'about-portrait')}${media(about.introduction.detailImage, 'Design detail', 'about-detail')}</div></section>
     <section class="about-experience"><header><h2>Experience</h2><p>${esc(p.experienceIntro)}</p>${p.experienceImage ? `<img class="experience-image" src="${esc(asset(p.experienceImage))}" alt="WWP Beauty product design" loading="lazy">` : ''}</header><div class="experience-capabilities">${p.experience.map(item => `<article class="experience-capability"><div class="experience-title-row"><div class="experience-company"><div class="experience-reveal"><h3 lang="zh-CN">${esc(item.companyZh)}</h3></div><small>${esc(item.companyEn)}</small></div><div class="experience-role"><strong lang="zh-CN">${esc(item.roleZh)}</strong><small>${esc(item.roleEn)}</small><time>${esc(item.years)}</time></div></div><div class="experience-copy"><p class="zh" lang="zh-CN">${esc(item.zh)}</p><p class="en">${esc(item.en)}</p></div></article>`).join('')}</div><div class="experience-partners"><h2>Clients <span lang="zh-CN">/ 合作品牌</span></h2><div class="partner-marquee"><div class="partner-track">${[...p.brands.logos,...p.brands.logos].map(logo => `<span class="partner-logo"><img src="${esc(asset(logo.image))}" alt="${esc(logo.name)}" loading="lazy"></span>`).join('')}</div></div></div></section>
     <section class="about-awards"><div class="awards-inner"><h2>Awards &amp;<br>Recognitions</h2><div class="awards-grid">${p.recognition.map((item, index) => `<article class="award-card" style="--i:${index}"><header><h3>${esc(item.title)}</h3>${item.result ? `<strong>( ${esc(item.result)} )</strong>` : ''}</header><div class="award-copy"><p>${esc(item.en)}</p><p lang="zh-CN">${esc(item.zh)}</p></div>${item.year ? `<time>${esc(item.year)}</time>` : ''}</article>`).join('')}</div></div></section>
-    <section class="about-capabilities"><header class="about-feature-head"><p>( 04 ) Capabilities / 核心能力</p><h2>Designing across product, packaging and production.<span lang="zh-CN">连接产品、包装与生产的完整设计能力。</span></h2></header><div class="capability-editorial">${p.capabilities.map((item, index) => `<article><div class="capability-title"><h3>${esc(item.titleEn)}</h3></div><div class="capability-copy"><p>${esc(item.en)}</p><p class="zh" lang="zh-CN">${esc(item.zh)}</p><div class="capability-lists"><ul>${item.keywords.map(keyword => `<li>${esc(keyword)}</li>`).join('')}</ul><ul>${(p.tools[index]?.items || []).map(tool => `<li>${esc(tool)}</li>`).join('')}</ul></div></div></article>`).join('')}</div></section>
-    <section class="about-process"><header class="about-feature-head"><p>( 05 ) From Concept to Production</p><h2>From Concept to Production<span lang="zh-CN">从概念到量产</span></h2></header><ol>${p.process.map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.stageEn)}<small lang="zh-CN">${esc(item.stageZh)}</small></h3><p>${esc(item.keywordsEn)}<small lang="zh-CN">${esc(item.keywordsZh)}</small></p></li>`).join('')}</ol><div class="process-statement"><p>${esc(p.processStatementEn)}</p><span lang="zh-CN">${esc(p.processStatementZh)}</span></div></section>
-    <section class="about-bring about-layout"><header><p>( 06 )</p><h2>What I Bring<span lang="zh-CN">我的价值</span></h2></header><div class="bring-list">${p.bring.map((item, index) => `<article><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.titleEn)}<small lang="zh-CN">${esc(item.titleZh)}</small></h3><div><p>${esc(item.en)}</p><p class="zh" lang="zh-CN">${esc(item.zh)}</p></div></article>`).join('')}</div></section>
+    <section class="about-showcase">${media(p.showcaseImage, 'Cosmetic applicator structure development')}</section>
+    <section class="about-carousel" aria-label="Selected project carousel"><div class="carousel-viewport"><div class="carousel-track">${p.carousel.map((item, index) => `<figure class="carousel-slide"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" loading="lazy"><figcaption><span>${String(index + 1).padStart(2, '0')} / ${String(p.carousel.length).padStart(2, '0')}</span>${esc(item.title)}</figcaption></figure>`).join('')}</div></div><footer><p>Selected projects</p><div><button class="carousel-prev" type="button" aria-label="Previous project">←</button><button class="carousel-next" type="button" aria-label="Next project">→</button></div></footer></section>
     <section class="about-values"><header><p>( 07 ) Values / 设计原则</p></header><div>${p.values.map(item => `<article><h2>${esc(item.titleEn)}<span lang="zh-CN">${esc(item.titleZh)}</span></h2><p>${esc(item.en)}<span lang="zh-CN">${esc(item.zh)}</span></p></article>`).join('')}</div></section>
-    <section class="about-closing"><div><h2>${esc(p.cta.titleEn)}<span lang="zh-CN">${esc(p.cta.titleZh)}</span></h2><div class="closing-copy"><div>${p.cta.bodyEn.map(text => `<p>${esc(text)}</p>`).join('')}</div><div class="zh" lang="zh-CN">${p.cta.bodyZh.map(text => `<p>${esc(text)}</p>`).join('')}</div></div></div><a href="${base}/contact/">${esc(p.cta.labelEn)}<span lang="zh-CN">${esc(p.cta.labelZh)}</span></a></section>
+    <section class="about-process about-combined"><header class="about-feature-head"><p>Capabilities &amp; Process</p><h2>From Concept to Production<span lang="zh-CN">从概念到量产</span></h2></header><ol>${p.process.map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><h3>${esc(item.stageEn)}<small lang="zh-CN">${esc(item.stageZh)}</small></h3><p>${esc(item.keywordsEn)}<small lang="zh-CN">${esc(item.keywordsZh)}</small></p></li>`).join('')}</ol><div class="combined-capabilities">${p.capabilities.map((item, index) => `<article><h3>${esc(item.titleEn)}</h3><p lang="zh-CN">${esc(item.titleZh)}</p><ul>${item.keywords.map((keyword, itemIndex) => `<li><span>${esc(keyword)}</span><span>${esc(p.tools[index]?.items[itemIndex] || '')}</span></li>`).join('')}</ul></article>`).join('')}</div></section>
+    <section class="about-closing"><a href="${base}/contact/"><h2>${esc(p.cta.titleEn)}<span lang="zh-CN">${esc(p.cta.titleZh)}</span></h2></a></section>
   `)(about) : '';
   const aboutPageHtml = `<main class="about-page" id="about">${aboutSectionsHtml}</main>`;
 
@@ -38,11 +38,28 @@
   if (page === 'project') root.innerHTML = `${nav}<main class="project-detail"><header class="project-detail-head"><p>${esc(p.number)} / ${esc(p.year)}</p><h1>${esc(p.title)}</h1><div><span>${esc(p.subtitle)}</span><small>${p.services.map(item => esc(item)).join('<br>')}</small></div></header>${media(p.hero, p.title, 'project-hero')}<section class="project-overview"><p>( Overview )</p><h2>${esc(p.overview || '项目说明待编辑')}</h2></section>${p.sections.map((section, index) => `<section class="project-chapter"><header><span>${String(index + 1).padStart(2, '0')}</span><h2>${esc(section.heading)}</h2></header><p>${esc(section.body || '正文待编辑')}</p>${media(section.image, section.heading)}</section>`).join('')}<section class="project-gallery">${p.gallery.map((image, index) => media(image, `${p.title} gallery ${index + 1}`)).join('')}</section><a class="next-project" href="${esc(p.next.href)}"><span>Next project</span><strong>${esc(p.next.title)}</strong></a></main>`;
 
   document.querySelector('.menu')?.addEventListener('click', () => document.querySelector('.nav').classList.toggle('open'));
-  if ((page === 'about' || page === 'home') && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
-    const experienceObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); experienceObserver.unobserve(entry.target); }
-    }), { threshold: .2 });
-    document.querySelectorAll('.experience-capability, .award-card, .capability-editorial article').forEach(item => experienceObserver.observe(item));
+  if (page === 'about' || page === 'home') {
+    if (!matchMedia('(prefers-reduced-motion:reduce)').matches) {
+      const experienceObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); experienceObserver.unobserve(entry.target); }
+      }), { threshold: .2 });
+      document.querySelectorAll('.experience-capability, .award-card, .about-values article, .about-process>ol>li, .about-closing h2').forEach(item => experienceObserver.observe(item));
+    }
+    const carousel = document.querySelector('.about-carousel');
+    const track = carousel?.querySelector('.carousel-track');
+    const slides = carousel?.querySelectorAll('.carousel-slide') || [];
+    let carouselIndex = 0;
+    const showSlide = index => { carouselIndex = (index + slides.length) % slides.length; track.style.transform = `translateX(-${carouselIndex * 100}%)`; };
+    carousel?.querySelector('.carousel-prev')?.addEventListener('click', () => showSlide(carouselIndex - 1));
+    carousel?.querySelector('.carousel-next')?.addEventListener('click', () => showSlide(carouselIndex + 1));
+    const navElement = document.querySelector('.nav');
+    const lightSections = document.querySelectorAll('.home-projects, .about-showcase, .about-carousel');
+    const setNavTone = () => navElement.classList.toggle('over-projects', [...lightSections].some(section => {
+      const bounds = section.getBoundingClientRect();
+      return bounds.top <= 20 && bounds.bottom > 20;
+    }));
+    addEventListener('scroll', setNavTone, { passive: true });
+    setNavTone();
   }
   if (page === 'contact') {
     const copy = document.querySelector('.copy-mail');
@@ -55,11 +72,6 @@
     const cards = document.querySelectorAll('.project-card');
     const observer = new IntersectionObserver(entries => entries.forEach(entry => entry.target.classList.toggle('visible', entry.isIntersecting)), { threshold: .12 });
     cards.forEach(card => observer.observe(card));
-    const navElement = document.querySelector('.nav');
-    const work = document.querySelector('#selected-work');
-    const aboutSection = document.querySelector('#about');
-    const setNav = () => navElement.classList.toggle('over-projects', scrollY >= work.offsetTop - 20 && scrollY < aboutSection.offsetTop - 20);
-    addEventListener('scroll', setNav, { passive: true }); setNav();
     if (!matchMedia('(prefers-reduced-motion:reduce)').matches) {
       const hero = document.querySelector('.home');
       const trail = document.querySelector('.cursor-trail');
