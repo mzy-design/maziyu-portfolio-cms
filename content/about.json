@@ -14,17 +14,19 @@
   },
   "showcaseImage": "images/about/ip-development-wide.webp",
   "carousel": [
-    {"title":"Hourglass","image":"images/about/carousel-landscape/hourglass.png"},
+    {"title":"Hourglass","image":"images/about/carousel-landscape/hourglass-wide.webp"},
     {"title":"WWP Beauty","image":"images/projects/wwp-beauty/cover.jpg"},
-    {"title":"WWP Keychain","image":"images/about/carousel-landscape/wwp-keychain.png"},
+    {"title":"WWP Keychain","image":"images/about/carousel-landscape/wwp-keychain-wide.webp"},
     {"title":"精准出料","image":"images/projects/precision-dispensing/cover.jpg"},
     {"title":"Heaven Pink Lipstick","image":"images/about/carousel-landscape/heaven-pink-lipstick.png"},
     {"title":"Heaven Pink Palette","image":"images/about/carousel-landscape/heaven-pink-palette.png"},
     {"title":"Rare Beauty","image":"images/about/carousel-landscape/rare-beauty.png"},
     {"title":"Mansion","image":"images/about/carousel-landscape/mansion.png"},
-    {"title":"Schwan","image":"images/projects/schwan/cover.webp"},
+    {"title":"Schwan","image":"images/about/carousel-landscape/schwan-wide.webp"},
     {"title":"Mario","image":"images/projects/mario/cover.gif"},
-    {"title":"Zhiben","image":"images/projects/zhiben/cover.webp"}
+    {"title":"Zhiben","image":"images/projects/zhiben/cover.webp"},
+    {"title":"IP Development","image":"images/about/ip-development-wide.webp"},
+    {"title":"ID Packaging","image":"images/about/carousel-landscape/id-packaging.gif"}
   ],
   "experienceIntro": "Working from the brand side across beauty product design, packaging and visual systems, with a focus on building a more consistent product language from concept through launch.",
   "experienceImage": "images/about/wwp-beauty-capabilities.webp",
