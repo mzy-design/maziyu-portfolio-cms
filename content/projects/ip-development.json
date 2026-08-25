@@ -1,0 +1,16 @@
+{
+  "number": "03",
+  "title": "IP Development",
+  "subtitle": "Patents & structural innovation",
+  "year": "2025–2026",
+  "services": ["Product concept", "Structure", "Interaction design"],
+  "hero": "images/about/ip-development-wide.webp",
+  "overview": "Selected IP developed through product innovation and engineering collaboration, spanning patented designs and concepts subsequently advanced into corporate patent applications.",
+  "sections": [
+    {"heading":"刮刀式涂抹化妆品容器","body":"CN224069925U · 共同发明人 · 产品与结构设计 · 已授权","image":""},
+    {"heading":"旋转挤出式化妆容器","body":"CN223943970U · 产品概念与结构设计 · 已授权","image":""},
+    {"heading":"可单手操作的化妆品容器","body":"CN122271664A · 原创概念与交互设计 · 专利申请","image":""}
+  ],
+  "gallery": [],
+  "next": {"title":"Hourglass","href":"../hourglass/"}
+}
