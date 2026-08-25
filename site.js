@@ -1,7 +1,7 @@
 (async () => {
   const page = document.body.dataset.page;
   const base = window.BASE_PATH ?? (page === 'home' ? '.' : '..');
-  const getJson = path => fetch(path).then(response => {
+  const getJson = path => fetch(path, { cache: 'no-store' }).then(response => {
     if (!response.ok) throw Error('Content failed to load');
     return response.json();
   });
@@ -32,7 +32,7 @@
   const aboutHref = page === 'home' ? '#about' : `${base}/about/`;
   const nav = `<header class="nav"><a class="brand" href="${homeHref}">Ma ZiYu</a><nav><a href="${homeHref}">Home</a><a href="${worksHref}">Works</a><a href="${aboutHref}">About</a></nav><a href="${base}/contact/">Let’s talk</a><button class="menu" aria-label="Open menu">Menu</button></header>`;
 
-  if (page === 'home') root.innerHTML = `${nav}<main><section class="home" id="top" style="--hero:url('${esc(p.background)}')"><div class="cursor-trail" aria-hidden="true"></div><div class="hero-title" aria-label="${esc(p.hero)}">${[...p.hero].map((character, index) => `<span style="--i:${index}">${esc(character)}</span>`).join('')}</div><p class="intro">${esc(p.intro)}</p><p class="location">${esc(p.location)}</p><a class="down" href="#selected-work" aria-label="View works">↓</a></section><section class="home-projects" id="selected-work"><div class="projects-head"><p>Selected work</p><span>${p.projects.length} projects · 2026</span></div><div class="projects-grid">${p.projects.map((item, index) => `<a class="project-card ${item.wide ? 'wide' : ''}" href="${esc(item.href)}"><div class="project-media"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" loading="lazy"></div><div class="project-meta"><h2>${esc(item.title)}</h2><p>${esc(item.tags)}</p><span>${String(index + 1).padStart(2, '0')}</span></div></a>`).join('')}</div></section><section class="about-page" id="about">${aboutSectionsHtml}</section></main>`;
+  if (page === 'home') root.innerHTML = `${nav}<main><section class="home" id="top" style="--hero:url('${esc(p.background)}')"><div class="cursor-trail" aria-hidden="true"></div><div class="hero-title" aria-label="${esc(p.hero)}">${[...p.hero].map((character, index) => `<span style="--i:${index}">${esc(character)}</span>`).join('')}</div><p class="intro">${esc(p.intro)}</p><p class="location">${esc(p.location)}</p><a class="down" href="#selected-work" aria-label="View works">↓</a></section><section class="home-projects" id="selected-work"><div class="projects-head"><p>Selected work</p><span>${p.projects.length} projects · 2026</span></div><div class="projects-grid">${p.projects.map((item, index) => { const tag = item.hasDetail ? 'a' : 'article'; const href = item.hasDetail ? ` href="${esc(item.href)}"` : ''; return `<${tag} class="project-card ${item.wide ? 'wide' : ''} ${item.hasDetail ? '' : 'is-static'}"${href}><div class="project-media"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" loading="lazy"></div><div class="project-meta"><h2>${esc(item.title)}</h2><p>${esc(item.tags)}</p><span>${String(index + 1).padStart(2, '0')}</span></div></${tag}>`; }).join('')}</div></section><section class="about-page" id="about">${aboutSectionsHtml}</section></main>`;
   if (page === 'works') {
     const projectCard = (item, index) => {
       const tag = item.hasDetail ? 'a' : 'article';
