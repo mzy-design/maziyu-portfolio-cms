@@ -13,7 +13,8 @@
     { "title": "WWP Beauty", "tags": "Packaging Development · CMF", "image": "images/projects/wwp-beauty/cover.jpg", "hasDetail": false, "wide": true },
     { "title": "Heaven Pink Lipstick", "tags": "Launched · Product & Packaging", "image": "images/projects/heaven-pink-lipstick/cover.jpg", "hasDetail": false, "wide": false },
     { "title": "Heaven Pink Palette", "tags": "Launched · Product & Packaging", "image": "images/projects/heaven-pink-palette/cover.jpg", "hasDetail": false, "wide": false },
-    { "title": "WWP Keychain", "tags": "Visual Exploration · Product Concept", "image": "images/projects/wwp-keychain/cover.jpg", "hasDetail": false, "wide": true },
+    { "title": "省料棒类容器结构", "tags": "Material-saving · Stick Packaging", "image": "images/projects/material-saving-stick/cover.gif", "hasDetail": false, "wide": true },
+    { "title": "WWP Keychain", "tags": "Visual Exploration · Product Concept", "image": "images/projects/wwp-keychain/cover.jpg", "hasDetail": false, "wide": false },
     { "title": "Mansion", "tags": "Form Exploration · CMF", "image": "images/projects/mansion/cover.webp", "hasDetail": false, "wide": false },
     { "title": "Mario", "tags": "Product Visualisation · Motion", "image": "images/projects/mario/cover.gif", "hasDetail": false, "wide": true }
   ]
