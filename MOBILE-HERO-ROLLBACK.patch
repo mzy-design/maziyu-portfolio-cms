@@ -1,0 +1,7 @@
+*** Begin Patch
+*** Update File: index.html
+@@
+-<link rel="stylesheet" href="./cursor-trail.css"><link rel="stylesheet" href="./mobile-home.css?v=20260823d">
++<link rel="stylesheet" href="./cursor-trail.css">
+*** Delete File: mobile-home.css
+*** End Patch

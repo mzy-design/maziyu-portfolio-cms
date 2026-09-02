@@ -1,0 +1,35 @@
+*** Begin Patch
+*** Update File: site.js
+@@
+-    if (!matchMedia('(prefers-reduced-motion:reduce)').matches) {
++    if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
+@@
+-      let index = 0, lastX = -100, lastY = -100, touchStart;
+-      const spawnTrail = event => {
+-        const distance = event.pointerType === 'touch' ? 70 : 100;
+-        if (Math.hypot(event.clientX - lastX, event.clientY - lastY) < distance) return;
+-        lastX = event.clientX; lastY = event.clientY;
+-        const image = document.createElement('img'); const box = hero.getBoundingClientRect();
+-        image.className = 'trail-image'; image.src = sources[index % sources.length]; image.style.cssText = `left:${event.clientX}px;top:${event.clientY - box.top}px`;
+-        trail.append(image); index++; image.addEventListener('animationend', () => image.remove(), { once: true });
+-      };
+-      hero.addEventListener('pointerdown', event => {
+-        if (event.pointerType === 'touch') touchStart = { x: event.clientX, y: event.clientY };
+-      }, { passive: true });
++      let index = 0, lastX = -100, lastY = -100;
+       hero.addEventListener('pointermove', event => {
+-        if (event.pointerType === 'touch' && (!touchStart || Math.abs(event.clientX - touchStart.x) < Math.abs(event.clientY - touchStart.y))) return;
+-        spawnTrail(event);
+-      }, { passive: true });
+-      ['pointerup', 'pointercancel'].forEach(type => hero.addEventListener(type, () => { touchStart = undefined; lastX = lastY = -100; }, { passive: true }));
++        if (Math.hypot(event.clientX - lastX, event.clientY - lastY) < 100) return;
++        lastX = event.clientX; lastY = event.clientY;
++        const image = document.createElement('img'); const box = hero.getBoundingClientRect();
++        image.className = 'trail-image'; image.src = sources[index % sources.length]; image.style.cssText = `left:${event.clientX}px;top:${event.clientY - box.top}px`;
++        trail.append(image); index++; image.addEventListener('animationend', () => image.remove(), { once: true });
++      });
+*** Update File: cursor-trail.css
+@@
+-.cursor-trail{position:absolute;z-index:1;inset:0;overflow:hidden;pointer-events:none}.trail-image{position:absolute;width:179px;height:204px;object-fit:contain;opacity:1;transform:translate(-50%,-50%) scale(0);will-change:transform;animation:trail-pop .65s linear both}@keyframes trail-pop{0%{transform:translate(-50%,-50%) scale(0)}16%{transform:translate(-50%,-50%) scale(.29)}31%{transform:translate(-50%,-50%) scale(.63)}46%{transform:translate(-50%,-50%) scale(.85)}62%{transform:translate(-50%,-50%) scale(.93)}68%{transform:translate(-50%,-50%) scale(1)}77%{transform:translate(-50%,-50%) scale(.51)}100%{transform:translate(-50%,-50%) scale(0)}}@media(pointer:coarse){.home{touch-action:pan-y}.trail-image{width:134px;height:153px}}@media(prefers-reduced-motion:reduce){.cursor-trail{display:none}}
++.cursor-trail{position:absolute;z-index:1;inset:0;overflow:hidden;pointer-events:none}.trail-image{position:absolute;width:179px;height:204px;object-fit:contain;opacity:1;transform:translate(-50%,-50%) scale(0);will-change:transform;animation:trail-pop .65s linear both}@keyframes trail-pop{0%{transform:translate(-50%,-50%) scale(0)}16%{transform:translate(-50%,-50%) scale(.29)}31%{transform:translate(-50%,-50%) scale(.63)}46%{transform:translate(-50%,-50%) scale(.85)}62%{transform:translate(-50%,-50%) scale(.93)}68%{transform:translate(-50%,-50%) scale(1)}77%{transform:translate(-50%,-50%) scale(.51)}100%{transform:translate(-50%,-50%) scale(0)}}@media(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-trail{display:none}}
+*** End Patch

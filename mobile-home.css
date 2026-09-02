@@ -1,0 +1,35 @@
+@media (max-width: 760px) {
+  .home {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+    background-position: center;
+  }
+
+  .hero-title {
+    left: auto;
+    right: 5.5vw;
+    top: 42%;
+    font-size: 20.5vw;
+  }
+
+  .intro {
+    left: 72%;
+    right: auto;
+    top: 65%;
+    width: 15vw;
+    font-size: max(7px, .91vw);
+  }
+
+  .location {
+    left: 1.56vw;
+    bottom: 1.37vw;
+    font-size: max(8px, .91vw);
+  }
+
+  .down {
+    right: 1.76vw;
+    bottom: 1.17vw;
+    font-size: max(12px, 1.43vw);
+  }
+}
