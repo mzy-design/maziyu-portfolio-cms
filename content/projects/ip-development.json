@@ -5,12 +5,13 @@
   "year": "2025–2026",
   "services": ["Product concept", "Structure", "Interaction design"],
   "hero": "images/about/ip-development-wide.webp",
-  "overview": "Selected IP developed through product innovation and engineering collaboration, spanning patented designs and concepts subsequently advanced into corporate patent applications.",
+  "overview": "围绕取料、涂抹与单手操作展开的结构创新，从产品概念、使用交互到工程协同与知识产权转化。",
   "sections": [
-    {"heading":"刮刀式涂抹化妆品容器","body":"CN224069925U · 共同发明人 · 产品与结构设计 · 已授权","image":""},
-    {"heading":"旋转挤出式化妆容器","body":"CN223943970U · 产品概念与结构设计 · 已授权","image":"images/projects/material-saving-stick/cover.gif"},
-    {"heading":"可单手操作的化妆品容器","body":"CN122271664A · 原创概念与交互设计 · 专利申请","image":""}
+    {"heading":"刮刀式涂抹化妆品容器","body":"CN224069925U · 共同发明人 · 产品与结构设计 · 已授权。通过瓶口内塞刮除涂抹杆多余料体，只在两侧保留用料，使取料更均匀，并帮助瓶口保持清洁。","image":"images/projects/ip-development/spatula-applicator.jpg"},
+    {"heading":"旋转挤出式化妆容器","body":"CN223943970U · 产品概念与结构设计 · 已授权。通过旋转底座推动内部结构持续上升，减少口红式包装中的残留料体。","image":"images/projects/material-saving-stick/cover.gif"},
+    {"heading":"可单手操作的化妆品容器","body":"CN122271664A · 原创概念与交互设计 · 专利申请。围绕单手启闭与取用路径优化容器交互，使产品在移动和日常场景中更易操作。","image":"images/projects/ip-development/one-handed-container.gif"},
+    {"heading":"一种便于单手挤压的化妆品容器","body":"开模项目 · 产品与结构设计。围绕单手挤压取料与稳定握持进行结构开发，在紧凑形态中协调操作方式、密封与量产可行性。","image":"images/projects/wwp-beauty/cover.jpg"}
   ],
-  "gallery": ["images/projects/wwp-beauty/cover.jpg"],
+  "gallery": [],
   "next": {"title":"Hourglass","href":"../hourglass/"}
 }
