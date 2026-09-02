@@ -1,3 +1,0 @@
-.project-detail-head h1{animation:project-title-in 1.15s cubic-bezier(.2,.8,.2,1) both}
-@media(prefers-reduced-motion:no-preference){.project-overview h2,.project-chapter header,.next-project strong{opacity:0;transform:translateY(46px);transition:opacity .85s cubic-bezier(.2,.8,.2,1),transform .85s cubic-bezier(.2,.8,.2,1)}.project-overview h2.is-visible,.project-chapter header.is-visible,.next-project strong.is-visible{opacity:1;transform:none}}
-@keyframes project-title-in{from{opacity:0;transform:translateY(70px);filter:blur(7px)}}
