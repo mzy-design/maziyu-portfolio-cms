@@ -1,21 +1,17 @@
 {
-  "name": "Ma ZiYu",
-  "hero": "IVEN",
-  "intro": "I design beauty products with form, function and purpose.",
-  "location": "Based in Shanghai",
-  "background": "images/home-background.webp",
+  "name": "Ma ZiYu", "hero": "IVEN", "intro": "I design beauty products with form, function and purpose.", "location": "Based in Shanghai", "background": "images/home-background.webp",
   "projects": [
-    { "title": "Hourglass", "tags": "Client-selected · Packaging", "image": "images/projects/hourglass/cover.jpg", "href": "works/hourglass/", "hasDetail": true, "wide": false },
-    { "title": "Schwan", "tags": "Client-selected · Packaging & CMF", "image": "images/projects/schwan/cover.webp", "href": "works/schwan/", "hasDetail": true, "wide": false },
-    { "title": "Spatula Innovation", "tags": "Patents · Structure & Interaction", "image": "images/about/ip-development-wide.webp", "href": "works/ip-development/", "hasDetail": true, "wide": true },
-    { "title": "精准出料", "tags": "Dispensing · Structure Development", "image": "images/projects/precision-dispensing/cover.jpg", "hasDetail": false, "wide": true },
-    { "title": "Zhiben", "tags": "Tooling · Packaging Development", "image": "images/projects/zhiben/cover.webp", "hasDetail": false, "wide": true },
-    { "title": "WWP Beauty", "tags": "Packaging Development · CMF", "image": "images/projects/wwp-beauty/cover.jpg", "hasDetail": false, "wide": true },
-    { "title": "Heaven Pink Lipstick", "tags": "Launched · Product & Packaging", "image": "images/projects/heaven-pink-lipstick/cover.jpg", "hasDetail": false, "wide": false },
-    { "title": "Heaven Pink Palette", "tags": "Launched · Product & Packaging", "image": "images/projects/heaven-pink-palette/cover.jpg", "hasDetail": false, "wide": false },
-    { "title": "省料棒类容器结构", "tags": "Material-saving · Stick Packaging", "image": "images/projects/material-saving-stick/cover-structure.jpg", "hasDetail": false, "wide": true },
-    { "title": "WWP Keychain", "tags": "Visual Exploration · Product Concept", "image": "images/projects/wwp-keychain/cover.jpg", "hasDetail": false, "wide": false },
-    { "title": "Mansion", "tags": "Form Exploration · CMF", "image": "images/projects/mansion/cover.webp", "hasDetail": false, "wide": false },
-    { "title": "Mario", "tags": "Product Visualisation · Motion", "image": "images/projects/mario/cover.gif", "hasDetail": false, "wide": true }
+    {"title":"Hourglass","tags":"Client-selected · Packaging & CMF","note":"客户选中方案","detailCategory":"Packaging & CMF","image":"images/projects/hourglass/cover.jpg","href":"works/hourglass/","hasDetail":true,"wide":false},
+    {"title":"Schwan","tags":"Client-selected · Packaging & CMF","note":"客户选中方案","detailCategory":"Packaging & CMF","image":"images/projects/schwan/cover.webp","href":"works/schwan/","hasDetail":true,"wide":false},
+    {"title":"Spatula","tags":"Patented · Structure & Innovation","note":"专利结构项目","detailCategory":"Structure & Innovation","image":"images/about/ip-development-wide.webp","href":"works/ip-development/","hasDetail":true,"wide":true},
+    {"title":"Precision Dispensing","tags":"Structure Concept · Controlled Dispensing","note":"精准出料结构","detailCategory":"Dispensing & Structure","image":"images/projects/precision-dispensing/cover.jpg","hasDetail":false,"wide":true},
+    {"title":"Easy-Scoop Jar","tags":"Structure Concept · User Experience","note":"省力取料面霜罐 / 至本提案","detailCategory":"Structure & Interaction","image":"images/projects/zhiben/cover.webp","hasDetail":false,"wide":true},
+    {"title":"Grip Tottle","tags":"Product Development · Form & Ergonomics","note":"单侧凹陷易握持 / 吹塑开模","detailCategory":"Form & Ergonomics","image":"images/projects/wwp-beauty/cover.jpg","hasDetail":false,"wide":true},
+    {"title":"Heaven Pink Lipstick","tags":"Launched · Product & Packaging","note":"已上市","detailCategory":"Product & Packaging","image":"images/projects/heaven-pink-lipstick/cover.jpg","hasDetail":false,"wide":false},
+    {"title":"Heaven Pink Palette","tags":"Launched · Product & Packaging","note":"已上市","detailCategory":"Product & Packaging","image":"images/projects/heaven-pink-palette/cover.jpg","hasDetail":false,"wide":false},
+    {"title":"Material-Saving Stick","tags":"Structure Concept · Material Efficiency","note":"省料棒类容器结构","detailCategory":"Structure & Sustainability","image":"images/projects/material-saving-stick/cover-structure.jpg","hasDetail":false,"wide":true},
+    {"title":"Roll Up Lip Gloss","tags":"Concept · Product Exploration","note":"概念探索","detailCategory":"Product Exploration","image":"images/projects/wwp-keychain/cover.jpg","hasDetail":false,"wide":false},
+    {"title":"Tie Up Lip Gloss","tags":"Concept · Form & CMF","note":"造型 / CMF 探索","detailCategory":"Form & CMF","image":"images/projects/mansion/cover.webp","hasDetail":false,"wide":false},
+    {"title":"Twist-Up Lipstick","tags":"Product Innovation · One-Hand Interaction","note":"单手旋转弹出口红","detailCategory":"Interaction & Innovation","image":"images/projects/mario/cover.gif","hasDetail":false,"wide":true}
   ]
 }

@@ -1,7 +1,8 @@
 {
   "number": "03",
   "title": "Spatula",
-  "subtitle": "Patents & Structure",
+  "note": "专利结构项目",
+  "subtitle": "Structure & Innovation",
   "year": "2025–2026",
   "services": ["Product concept", "Structure", "Interaction design"],
   "hero": "images/about/ip-development-wide.webp",

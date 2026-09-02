@@ -1,10 +1,10 @@
 .project-detail{position:relative;overflow:hidden}
 .project-detail-head{position:absolute;z-index:2;inset:0 0 auto;width:100%;height:100svh;min-height:0;padding:0 20px 36px;display:flex;align-items:flex-end;pointer-events:none}
 .project-detail-head>p,.project-detail-head>div{display:none}
-.project-detail-head h1{font-size:clamp(58px,7vw,96px);line-height:.95;letter-spacing:-.055em;white-space:nowrap;text-shadow:0 2px 22px #0003}
+.project-detail-head h1{font-size:clamp(58px,7vw,96px);line-height:.95;letter-spacing:-.055em;white-space:nowrap;text-shadow:0 2px 22px #0003}.project-detail-head h1 small{display:block;margin-top:12px;font-size:14px;font-weight:400;letter-spacing:0;text-shadow:none}
 .project-hero{display:block;width:100%;height:100svh;margin:0;object-fit:cover}
 .project-overview{position:relative;min-height:100svh;padding:43vh 20px 120px;grid-template-columns:174px minmax(0,1fr);overflow:hidden}
-.project-overview:before{content:"PATENTS & STRUCTURE  ·  PATENTS & STRUCTURE  ·  PATENTS & STRUCTURE  ·";position:absolute;top:55px;left:0;width:max-content;white-space:nowrap;font-size:clamp(92px,13vw,190px);font-weight:400;letter-spacing:-.065em;line-height:.85;animation:project-marquee 20s linear infinite}
+.project-overview:before{content:attr(data-marquee) "  ·  " attr(data-marquee) "  ·  " attr(data-marquee) "  ·";position:absolute;top:55px;left:0;width:max-content;white-space:nowrap;text-transform:uppercase;font-size:clamp(92px,13vw,190px);font-weight:400;letter-spacing:-.065em;line-height:.85;animation:project-marquee 20s linear infinite}
 .project-overview>p{font-size:0;text-transform:uppercase}
 .project-overview>p:after{content:"Info";font-size:14px}
 .project-overview h2{font-size:clamp(26px,3.4vw,42px);line-height:1.04;letter-spacing:-.035em;max-width:1000px}
