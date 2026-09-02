@@ -1,0 +1,13 @@
+{
+  "number": "10",
+  "title": "Roll Up Lip Gloss",
+  "note": "创意概念 · 挂绳式随身彩妆",
+  "subtitle": "Creative Concept",
+  "year": "2025",
+  "services": ["Product concept", "Portable interaction", "CMF"],
+  "hero": "images/projects/roll-up-lip-gloss/hero.jpg",
+  "overview": "围绕随身携带与个性表达展开的彩妆概念，将紧凑容器、挂绳配件与系列化 CMF 组合为可携带、可搭配的产品系统。",
+  "sections": [],
+  "gallery": [],
+  "next": {"title": "Oreo", "href": "../oreo/"}
+}

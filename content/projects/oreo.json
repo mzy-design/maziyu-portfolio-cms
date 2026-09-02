@@ -1,0 +1,13 @@
+{
+  "number": "13",
+  "title": "Oreo",
+  "note": "旋转弹出式双格彩妆盘",
+  "subtitle": "Concept & Interaction",
+  "year": "2024",
+  "services": ["Product concept", "Interaction design", "Compact design"],
+  "hero": "images/projects/oreo/cover.gif",
+  "overview": "以旋转顶部旋钮同时弹出两侧粉盒，构建紧凑而具有仪式感的彩妆交互。双侧空间可容纳粉饼，也可组合粉扑、镜子或随身工具；顶部旋钮可依据品牌语言进行定制。",
+  "sections": [],
+  "gallery": [],
+  "next": {"title": "Hourglass", "href": "../hourglass/"}
+}

@@ -10,9 +10,10 @@
     {"title":"Grip Tottle","tags":"Product Development · Form & Ergonomics","note":"单侧凹陷易握持 / 吹塑开模","detailCategory":"Form & Ergonomics","category":"tooling","image":"images/projects/wwp-beauty/cover.jpg","hasDetail":false},
     {"title":"Heaven Pink Lipstick","tags":"Launched · Product & Packaging","note":"已上市","detailCategory":"Product & Packaging","category":"selected","image":"images/projects/heaven-pink-lipstick/cover.jpg","hasDetail":false},
     {"title":"Heaven Pink Palette","tags":"Launched · Product & Packaging","note":"已上市","detailCategory":"Product & Packaging","category":"selected","image":"images/projects/heaven-pink-palette/cover.jpg","hasDetail":false},
-    {"title":"Material-Saving Stick","tags":"Structure Concept · Material Efficiency","note":"省料棒类容器结构","detailCategory":"Structure & Sustainability","category":"tooling","image":"images/projects/material-saving-stick/cover-structure.jpg","hasDetail":false},
-    {"title":"Roll Up Lip Gloss","tags":"Concept · Product Exploration","note":"概念探索","detailCategory":"Product Exploration","category":"visual","image":"images/projects/wwp-keychain/cover.jpg","hasDetail":false},
+    {"title":"GLS-355 Refillable Lipstick","tags":"Production Tooling · Refillable Packaging","note":"可替换内胆 / 可拆解回收","detailCategory":"Refill & Circular Design","category":"tooling","image":"images/projects/refillable-lipstick/cover.jpg","hasDetail":false},
+    {"title":"Roll Up Lip Gloss","tags":"Creative Concept","note":"创意概念 · 挂绳式随身彩妆","detailCategory":"Creative Concept","category":"visual","image":"images/projects/wwp-keychain/cover.jpg","href":"roll-up-lip-gloss/","hasDetail":true},
     {"title":"Tie Up Lip Gloss","tags":"Concept · Form & CMF","note":"造型 / CMF 探索","detailCategory":"Form & CMF","category":"visual","image":"images/projects/mansion/cover.webp","hasDetail":false},
-    {"title":"Twist-Up Lipstick","tags":"Product Innovation · One-Hand Interaction","note":"单手旋转弹出口红","detailCategory":"Interaction & Innovation","category":"visual","image":"images/projects/mario/cover.gif","hasDetail":false}
+    {"title":"Twist-Up Lipstick","tags":"Product Innovation · One-Hand Interaction","note":"单手旋转弹出口红","detailCategory":"Interaction & Innovation","category":"visual","image":"images/projects/mario/cover.gif","hasDetail":false},
+    {"title":"Oreo","tags":"Creative Concept · Compact Interaction","note":"旋转弹出式双格彩妆盘","detailCategory":"Concept & Interaction","category":"visual","image":"images/projects/oreo/cover.gif","href":"oreo/","hasDetail":true}
   ]
 }
