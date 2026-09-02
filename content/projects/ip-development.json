@@ -1,6 +1,6 @@
 {
   "number": "03",
-  "title": "Spatula",
+  "title": "Patents & Structure",
   "note": "专利结构项目",
   "subtitle": "Structure & Innovation",
   "year": "2025–2026",
@@ -14,5 +14,5 @@
     {"heading":"一种便于单手挤压的化妆品容器","body":"开模项目 · 产品与结构设计。围绕单手挤压取料与稳定握持进行结构开发，在紧凑形态中协调操作方式、密封与量产可行性。","image":"images/projects/wwp-beauty/cover.jpg"}
   ],
   "gallery": [],
-  "next": {"title":"Hourglass","href":"../hourglass/"}
+  "next": {"title":"Visual & Concept","href":"../roll-up-lip-gloss/"}
 }

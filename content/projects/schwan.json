@@ -1,1 +1,29 @@
-{"number":"02","title":"Schwan","note":"客户选中方案","subtitle":"Packaging & CMF","year":"2026","services":["Product design","Packaging design","CMF"],"hero":"images/projects/schwan/detail-hero.jpg","overview":"面向 Schwan 的客户确认方案，通过包装形态、CMF 与使用细节建立清晰而统一的产品表达。","sections":[],"gallery":[],"next":{"title":"Spatula","href":"../ip-development/"}}
+{
+  "number": "02",
+  "title": "Schwan",
+  "note": "客户选中方案",
+  "subtitle": "Packaging & CMF",
+  "year": "2025–2026",
+  "services": ["Product concept", "Packaging design", "Interaction & CMF"],
+  "hero": "images/projects/schwan/detail-hero.jpg",
+  "overview": "为年轻消费群体设计的多功能面部棒包装，将可叠加妆效、随身携带与趣味交互整合为清晰而可延展的产品体验。",
+  "sections": [
+    {
+      "heading": "项目需求",
+      "body": "面向 Gen Z 与 Alpha 用户，将遮瑕与护肤的双效定位转化为紧凑、圆润且便于随身携带的包装。设计重点包括旋转出料、帽盖集成涂抹器，以及可替换的挂环与趣味配件。",
+      "image": "images/projects/schwan/project-direction.jpg"
+    },
+    {
+      "heading": "交互方向",
+      "body": "围绕握持挂环、可拆顶片、帽盖涂抹器与软触部件展开多组方向，以简洁主体承载点击、旋转、滑动和随身悬挂等交互。",
+      "image": "images/projects/schwan/concept-direction.jpg"
+    },
+    {
+      "heading": "概念推演",
+      "body": "通过草图与结构方案比较双端、旋转取用、软触握持和装饰带等路径，在容量、比例、配件组合与使用直觉之间建立平衡。",
+      "image": "images/projects/schwan/concept-sketches.jpg"
+    }
+  ],
+  "gallery": [],
+  "next": {"title": "Patents & Structure", "href": "../ip-development/"}
+}
