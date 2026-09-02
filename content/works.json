@@ -7,13 +7,13 @@
     {"title":"Spatula","tags":"Patented · Structure & Innovation","note":"专利结构项目","detailCategory":"Structure & Innovation","category":"tooling","image":"images/about/ip-development-wide.webp","href":"ip-development/","hasDetail":true},
     {"title":"Precision Dispensing","tags":"Structure Concept · Controlled Dispensing","note":"精准出料结构","detailCategory":"Dispensing & Structure","category":"tooling","image":"images/projects/precision-dispensing/cover.jpg","hasDetail":false},
     {"title":"Easy-Scoop Jar","tags":"Structure Concept · User Experience","note":"省力取料面霜罐 / 至本提案","detailCategory":"Structure & Interaction","category":"tooling","image":"images/projects/zhiben/cover.webp","hasDetail":false},
-    {"title":"Grip Tottle","tags":"Product Development · Form & Ergonomics","note":"单侧凹陷易握持 / 吹塑开模","detailCategory":"Form & Ergonomics","category":"tooling","image":"images/projects/wwp-beauty/cover.jpg","hasDetail":false},
+    {"title":"Grip Tottle","tags":"Product Development · Form & Ergonomics","note":"单侧凹陷易握持 / 吹塑开模","detailCategory":"Form & Ergonomics","category":"tooling","image":"images/projects/wwp-beauty/cover.jpg","href":"ip-development/","hasDetail":true},
     {"title":"Heaven Pink Lipstick","tags":"Launched · Product & Packaging","note":"已上市","detailCategory":"Product & Packaging","category":"selected","image":"images/projects/heaven-pink-lipstick/cover.jpg","hasDetail":false},
     {"title":"Heaven Pink Palette","tags":"Launched · Product & Packaging","note":"已上市","detailCategory":"Product & Packaging","category":"selected","image":"images/projects/heaven-pink-palette/cover.jpg","hasDetail":false},
     {"title":"GLS-355 Refillable Lipstick","tags":"Production Tooling · Refillable Packaging","note":"可替换内胆 / 可拆解回收","detailCategory":"Refill & Circular Design","category":"tooling","image":"images/projects/refillable-lipstick/cover.jpg","hasDetail":false},
     {"title":"Roll Up Lip Gloss","tags":"Creative Concept","note":"创意概念 · 挂绳式随身彩妆","detailCategory":"Creative Concept","category":"visual","image":"images/projects/wwp-keychain/cover.jpg","href":"roll-up-lip-gloss/","hasDetail":true},
     {"title":"Tie Up Lip Gloss","tags":"Concept · Form & CMF","note":"造型 / CMF 探索","detailCategory":"Form & CMF","category":"visual","image":"images/projects/mansion/cover.webp","hasDetail":false},
     {"title":"Twist-Up Lipstick","tags":"Product Innovation · One-Hand Interaction","note":"单手旋转弹出口红","detailCategory":"Interaction & Innovation","category":"visual","image":"images/projects/mario/cover.gif","hasDetail":false},
-    {"title":"Oreo","tags":"Creative Concept · Compact Interaction","note":"旋转弹出式双格彩妆盘","detailCategory":"Concept & Interaction","category":"visual","image":"images/projects/oreo/cover.gif","href":"oreo/","hasDetail":true}
+    {"title":"Oreo","tags":"Creative Concept · Compact Interaction","note":"旋转弹出式双格彩妆盘","detailCategory":"Concept & Interaction","category":"visual","image":"images/projects/oreo/cover.gif","href":"roll-up-lip-gloss/","hasDetail":true}
   ]
 }

@@ -1,3 +1,14 @@
+.works .page-head { overflow: hidden; }
+.works-title-marquee { min-width: 0; overflow: hidden; }
+.works-title-marquee > div {
+  display: flex;
+  width: max-content;
+  animation: works-title-marquee 22s linear infinite;
+}
+.works-title-marquee h1 { flex: none; white-space: nowrap; }
+
+@keyframes works-title-marquee { to { transform: translateX(-25%); } }
+
 .works-filters {
   display: flex;
   gap: 20px;
@@ -30,10 +41,15 @@
 }
 
 @media (max-width: 760px) {
+  .works-title-marquee { width: calc(100vw - 36px); }
   .works-filters {
     gap: 14px;
     margin: -25px 0 40px;
     overflow-x: auto;
     white-space: nowrap;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .works-title-marquee > div { animation: none; }
 }
