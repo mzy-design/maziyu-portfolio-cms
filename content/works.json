@@ -10,11 +10,11 @@
   "projects": [
     {"title":"Hourglass","tags":"Client-selected · Packaging","category":"selected","status":"Client-selected","image":"images/projects/hourglass/cover.jpg","href":"hourglass/","hasDetail":true},
     {"title":"Schwan","tags":"Client-selected · Packaging & CMF","category":"selected","status":"Client-selected","image":"images/projects/schwan/cover.webp","href":"schwan/","hasDetail":true},
-    {"title":"IP Development","tags":"Patents · Structure & Interaction","category":"tooling","status":"Granted & filed","image":"images/about/ip-development-wide.webp","href":"ip-development/","hasDetail":true},
+    {"title":"Spatula Innovation","tags":"Patents · Structure & Interaction","category":"tooling","status":"Granted & filed","image":"images/about/ip-development-wide.webp","href":"ip-development/","hasDetail":true},
     {"title":"精准出料","tags":"Dispensing · Structure Development","category":"tooling","status":"Development project","image":"images/projects/precision-dispensing/cover.jpg","hasDetail":false},
     {"title":"Zhiben","tags":"Tooling · Packaging Development","category":"tooling","status":"Development project","image":"images/projects/zhiben/cover.webp","hasDetail":false},
     {"title":"WWP Beauty","tags":"Packaging Development · CMF","category":"tooling","status":"Selected work","image":"images/projects/wwp-beauty/cover.jpg","hasDetail":false},
-    {"title":"省料棒类容器结构","tags":"Material-saving · Stick Packaging","category":"tooling","status":"Structure concept","image":"images/projects/material-saving-stick/cover.gif","hasDetail":false},
+    {"title":"省料棒类容器结构","tags":"Material-saving · Stick Packaging","category":"tooling","status":"Structure concept","image":"images/projects/material-saving-stick/cover-structure.jpg","hasDetail":false},
     {"title":"Heaven Pink Lipstick","tags":"Launched · Product & Packaging","category":"selected","status":"Launched","image":"images/projects/heaven-pink-lipstick/cover.jpg","hasDetail":false},
     {"title":"Heaven Pink Palette","tags":"Launched · Product & Packaging","category":"selected","status":"Launched","image":"images/projects/heaven-pink-palette/cover.jpg","hasDetail":false},
     {"title":"WWP Keychain","tags":"Visual Exploration · Product Concept","category":"visual","status":"Tooling explored · Not tooled","image":"images/projects/wwp-keychain/cover.jpg","hasDetail":false},
