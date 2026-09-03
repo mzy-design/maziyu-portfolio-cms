@@ -13,7 +13,7 @@
   const esc = value => String(value ?? '').replace(/[&<>\"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
   const asset = path => /^(https?:|data:|\/)/.test(path) ? path : `${base}/${String(path).replace(/^\.\.\//, '')}`;
   const media = (path, alt = '', className = '') => path
-    ? `<img class="${className}" src="${esc(asset(path))}" alt="${esc(alt)}" loading="lazy">`
+    ? `<img class="${className}" src="${esc(asset(path))}" alt="${esc(alt)}" loading="${className === 'project-hero' ? 'eager' : 'lazy'}" decoding="async"${className === 'project-hero' ? ' fetchpriority="high"' : ''}>`
     : `<div class="media-placeholder ${className}" role="img" aria-label="图片占位符"><span>Image placeholder</span></div>`;
   const fanItems = about.carousel;
 
@@ -59,6 +59,9 @@
     root.innerHTML = `${nav}<main class="project-detail"><header class="project-detail-head"><p>${esc(p.number)} / ${esc(p.year)}</p><h1 class="${displayTitle.length > 14 ? 'is-long' : ''}">${esc(displayTitle)}${p.note ? `<small lang="zh-CN">${esc(p.note)}</small>` : ''}</h1><div><span>${esc(p.subtitle)}</span><small>${p.services.map(item => esc(item)).join('<br>')}</small></div></header>${media(p.hero, p.title, 'project-hero')}<section class="project-overview" data-marquee="${esc(p.subtitle)}"><p>( Overview )</p><h2>${esc(p.overview || '项目说明待编辑')}</h2></section>${p.sections.map((section, index) => { const images = section.images || [section.image]; return `<section class="project-chapter${section.layout ? ` is-${esc(section.layout)}` : ''}"><header><span>${String(index + 1).padStart(2, '0')}</span><h2>${esc(section.heading)}</h2></header><p>${esc(section.body || '正文待编辑')}</p><div class="project-chapter-media">${images.map((image, mediaIndex) => media(image, `${section.heading} ${mediaIndex + 1}`)).join('')}</div></section>`; }).join('')}${p.noteBlock ? `<section class="project-note"><header><span>${esc(p.noteBlock.eyebrow)}</span><small>${esc(p.noteBlock.meta)}</small></header><p lang="zh-CN">${esc(p.noteBlock.text)}</p></section>` : ''}<section class="project-gallery">${p.gallery.map((image, index) => media(image, `${p.title} gallery ${index + 1}`)).join('')}</section><section class="project-more"><header><h2>MORE WORKS</h2><a href="${base}/works/">SEE ALL (${detailed.length})</a></header><div class="project-more-grid">${moreWorks.map(item => `<a class="project-more-card" href="${base}/works/${esc(item.href)}"><img src="${esc(asset(item.image))}" alt="${esc(item.title)}" loading="lazy" decoding="async"><div><h3>${esc(item.title)}</h3><p>${esc(item.detailCategory || item.tags)}</p><small lang="zh-CN">${esc(item.note)}</small></div></a>`).join('')}</div></section></main>`;
   }
 
+  document.querySelectorAll('img').forEach(image => { image.draggable = false; image.decoding = 'async'; });
+  document.addEventListener('dragstart', event => { if (event.target.closest?.('img')) event.preventDefault(); });
+  document.addEventListener('contextmenu', event => { if (event.target.closest?.('img')) event.preventDefault(); });
   document.querySelector('.menu')?.addEventListener('click', () => document.querySelector('.nav').classList.toggle('open'));
   if (page === 'about' || page === 'home') {
     if (!matchMedia('(prefers-reduced-motion:reduce)').matches) {
@@ -151,14 +154,13 @@
       const hero = document.querySelector('.home');
       const trail = document.querySelector('.cursor-trail');
       const sources = p.projects.map(item => asset(item.image));
-      sources.slice(0, 3).forEach(src => { const image = new Image(); image.decoding = 'async'; image.src = src; });
       let index = 0, lastX = -100, lastY = -100, touchStart;
       const spawnTrail = event => {
         const distance = event.pointerType === 'touch' ? 70 : 100;
         if (Math.hypot(event.clientX - lastX, event.clientY - lastY) < distance) return;
         lastX = event.clientX; lastY = event.clientY;
         const image = document.createElement('img'); const box = hero.getBoundingClientRect();
-        image.className = 'trail-image'; image.src = sources[index % sources.length]; image.style.cssText = `left:${event.clientX}px;top:${event.clientY - box.top}px`;
+        image.className = 'trail-image'; image.src = sources[index % sources.length]; image.draggable = false; image.style.cssText = `left:${event.clientX}px;top:${event.clientY - box.top}px`;
         trail.append(image); index++; image.addEventListener('animationend', () => image.remove(), { once: true });
       };
       hero.addEventListener('pointerdown', event => {
