@@ -13,8 +13,19 @@
       "heading": "Oreo",
       "body": "通过旋转顶部旋钮，同时弹出两侧粉盒，形成紧凑而具有仪式感的彩妆交互。双侧空间可容纳粉饼，也可组合粉扑、镜子或随身工具；顶部旋钮可依据品牌语言定制。",
       "image": "images/projects/oreo/cover.gif"
+    },
+    {
+      "heading": "一种便于单手挤压的化妆品容器",
+      "body": "产品概念与结构设计。以单侧凹陷形成自然的手指支点，在紧凑圆润的形态中改善单手挤压、握持控制与便携性；该方向后续由 WWP Beauty 以可持续 PP / PE、人体工学与便携为核心公开发布。",
+      "images": ["images/projects/wwp-beauty/cover.jpg", "images/projects/roll-up-lip-gloss/official-release.png"],
+      "layout": "pair"
     }
   ],
+  "noteBlock": {
+    "eyebrow": "Design Note",
+    "meta": "One-hand interaction · Product & structural design",
+    "text": "单侧凹陷既是视觉识别，也是自然的手指支点。方案以较少的形态干预改善单手挤压、握持控制与随身携带体验，并将可持续 PP / PE 材料、紧凑圆形比例与量产结构纳入同一产品语言。"
+  },
   "gallery": [],
-  "next": {"title": "Hourglass", "href": "../hourglass/"}
+  "next": {"title": "Easy-Scoop Jar", "href": "../easy-scoop-jar/"}
 }

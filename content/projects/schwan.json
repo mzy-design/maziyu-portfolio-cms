@@ -11,17 +11,35 @@
     {
       "heading": "项目需求",
       "body": "面向 Gen Z 与 Alpha 用户，将遮瑕与护肤的双效定位转化为紧凑、圆润且便于随身携带的包装。设计重点包括旋转出料、帽盖集成涂抹器，以及可替换的挂环与趣味配件。",
-      "image": "images/projects/schwan/project-direction.jpg",
-      "layout": "split"
-    },
-    {
-      "heading": "概念推演",
-      "body": "围绕握持挂环、可拆顶片、帽盖涂抹器与软触部件展开多组方向，并通过草图与结构方案比较双端、旋转取用、软触握持和装饰带等路径。",
       "images": [
-        "images/projects/schwan/concept-direction.jpg",
-        "images/projects/schwan/concept-sketches.jpg"
+        "images/projects/schwan/process/scheme-2.jpg",
+        "images/projects/schwan/process/scheme-3.jpg"
       ],
       "layout": "pair"
+    },
+    {
+      "heading": "双端与模块方向",
+      "body": "围绕双端组合、可拆顶片和不同膏体模块展开多组结构，使功能扩展不牺牲随身尺寸与使用直觉。",
+      "images": [
+        "images/projects/schwan/process/scheme-4.jpg",
+        "images/projects/schwan/process/scheme-5.jpg"
+      ],
+      "layout": "pair"
+    },
+    {
+      "heading": "握持与随身交互",
+      "body": "进一步探索软触按压、环形握持、挂绳连接与刷头配件，让产品同时具备携带性、趣味性和可识别的操作提示。",
+      "images": [
+        "images/projects/schwan/process/scheme-6.jpg",
+        "images/projects/schwan/process/scheme-7.jpg"
+      ],
+      "layout": "pair"
+    },
+    {
+      "heading": "比例推演",
+      "body": "通过形体叠合与关键比例比较，校准顶部配件、主体截面和旋转底座的视觉关系，为最终方案收敛建立统一尺度。",
+      "image": "images/projects/schwan/process/scheme-8.jpg",
+      "layout": "split"
     },
     {
       "heading": "最终效果",

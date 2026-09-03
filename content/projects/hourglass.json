@@ -1,1 +1,37 @@
-{"number":"01","title":"Hourglass","note":"客户选中方案","subtitle":"Packaging & CMF","year":"2026","services":["Product design","Packaging design","CMF"],"hero":"images/projects/hourglass/cover.jpg","overview":"围绕 Hourglass 美妆包装方向完成的客户确认方案，聚焦产品比例、包装结构与品牌精致感之间的统一。","sections":[],"gallery":[],"next":{"title":"Schwan","href":"../schwan/"}}
+{
+  "number": "01",
+  "title": "Hourglass",
+  "note": "客户选中方案",
+  "subtitle": "Packaging & CMF",
+  "year": "2026",
+  "services": ["Product design", "Packaging design", "CMF"],
+  "hero": "images/projects/hourglass/final-wide.jpg",
+  "overview": "围绕 Hourglass 液体眼影包装展开的客户提案，从品牌几何语言、瓶盖识别与系列化 CMF 出发，形成兼顾精致感、陈列辨识度与量产可行性的方案体系。",
+  "sections": [
+    {
+      "heading": "品牌与结构方向",
+      "body": "从 Hourglass 标志性的切面、金属质感与建筑式比例中提取语言，探索方形、圆角和切角瓶盖与透明料体容器的组合。",
+      "images": ["images/projects/hourglass/process/direction-01.png", "images/projects/hourglass/process/direction-02.png"],
+      "layout": "pair"
+    },
+    {
+      "heading": "入选方向",
+      "body": "首轮提案中获得客户关注的六个方向，以紧凑方案带保留横向比较关系，避免低分辨率素材被过度放大。",
+      "image": "images/projects/hourglass/process/selected-directions.png",
+      "layout": "strip"
+    },
+    {
+      "heading": "系列化方案",
+      "body": "进一步比较顶部识别、握持比例、刷杆连接与色彩系统，让不同方案保持品牌一致性，同时具备各自清晰的货架识别。",
+      "images": ["images/projects/hourglass/process/direction-03.png", "images/projects/hourglass/process/selected-scheme.png"],
+      "layout": "pair"
+    },
+    {
+      "heading": "最终效果",
+      "body": "客户确认方向以简洁的金属顶盖、透明瓶身与克制的暖色 CMF 收敛，突出料体色彩并维持 Hourglass 的精致视觉。",
+      "image": "images/projects/hourglass/final-wide.jpg"
+    }
+  ],
+  "gallery": [],
+  "next": {"title": "Schwan", "href": "../schwan/"}
+}

@@ -1,0 +1,31 @@
+{
+  "number": "05",
+  "title": "Easy-Scoop Jar",
+  "displayTitle": "Easy-Scoop Jar",
+  "note": "省力取料面霜罐 / 至本提案",
+  "subtitle": "Structure & Interaction",
+  "year": "2026",
+  "services": ["Product concept", "Packaging structure", "User interaction"],
+  "hero": "images/projects/easy-scoop-jar/final-zhiben.png",
+  "overview": "针对面霜罐取料不便、工具收纳与盖体开启阻力，围绕省力开合、挖勺整合和更直观的取用路径提出三组结构方向，并将最终方向应用于至本客户提案。",
+  "sections": [
+    {
+      "heading": "问题与结构分析",
+      "body": "从盖体开启、挖勺收纳、内胆连接与握持摩擦四个触点拆解现有面霜罐，明确在不增加操作步骤的前提下改善取料体验。",
+      "image": "images/projects/easy-scoop-jar/structure-analysis.png",
+      "layout": "split"
+    },
+    {
+      "heading": "三组优化方向",
+      "body": "方案分别探索隐藏式辅助开启、去除传统铰链的直插连接，以及扩大品牌展示与握持区域。三组方向共同保留低学习成本与简洁外观。",
+      "image": "images/projects/easy-scoop-jar/concept-directions.png"
+    },
+    {
+      "heading": "至本提案 / 最终方案",
+      "body": "最终方案以更清晰的盖体层级、便于取用的挖勺与稳定的罐体比例完成收敛，并通过柔和材质与自然色彩表达温和的护肤体验。",
+      "image": "images/projects/easy-scoop-jar/final-zhiben.png"
+    }
+  ],
+  "gallery": [],
+  "next": {"title": "Hourglass", "href": "../hourglass/"}
+}
