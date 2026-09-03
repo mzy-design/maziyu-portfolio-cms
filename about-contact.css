@@ -31,6 +31,7 @@
 .wechat-panel img,.qr-placeholder{width:min(290px,70vw);aspect-ratio:1;background:#eee;color:#111;object-fit:contain}
 .qr-placeholder{display:grid;place-items:center;border:1px solid #777;font-family:"Source Han Sans SC","Noto Sans CJK SC","PingFang SC",sans-serif;font-size:14px;text-align:center;padding:30px}
 .contact-email{margin-top:30px;color:#999;font-size:13px}
+.contact-phone{margin-top:8px;color:#999;font-size:13px}
 @media(max-width:760px){
   .about-section{padding:110px 18px 70px}
   .about-heading,.about-intro,.resume-block{grid-template-columns:1fr}

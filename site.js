@@ -50,6 +50,7 @@
   }
   if (page === 'about') root.innerHTML = `${nav}${aboutPageHtml}`;
   if (page === 'contact') root.innerHTML = `${nav}<main class="contact-page"><section class="contact-hero"><a class="contact-title" href="mailto:${esc(p.email)}">${esc(p.title)}</a><div class="contact-actions"><button class="copy-mail" type="button" data-email="${esc(p.email)}">${esc(p.copyLabel)}</button><button class="wechat-toggle" type="button" aria-expanded="false">${esc(p.wechatLabel)}</button></div><a class="contact-email" href="mailto:${esc(p.email)}">${esc(p.email)}</a></section><section class="wechat-panel" hidden>${p.wechatImage ? `<img src="${esc(asset(p.wechatImage))}" alt="WeChat QR code">` : `<div class="qr-placeholder">${esc(p.wechatPlaceholder)}</div>`}</section></main>`;
+  if (page === 'contact' && p.phone) document.querySelector('.contact-email').insertAdjacentHTML('afterend', `<a class="contact-phone" href="tel:${esc(p.phone.replace(/\s/g, ''))}">${esc(p.phone)}</a>`);
   if (page === 'project') {
     const displayTitle = p.displayTitle || p.title;
     const currentRoute = location.pathname.split('/').filter(Boolean).pop();
