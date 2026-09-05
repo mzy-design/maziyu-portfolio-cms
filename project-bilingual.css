@@ -1,1 +1,6 @@
 .project-overview h2 small,.project-chapter h2 small,.project-chapter p small,.project-note>p small{display:block;margin-top:12px;color:#888;font-size:13px;font-weight:400;letter-spacing:0;line-height:1.5}
+
+@media(max-width:760px){
+  .project-detail-head{position:relative;height:auto;padding:96px 18px 28px}
+  .project-hero{height:auto;max-height:72svh;object-fit:contain}
+}

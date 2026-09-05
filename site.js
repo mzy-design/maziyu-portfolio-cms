@@ -10,6 +10,7 @@
   const aboutRequest = page === 'home' ? getJson(`${base}/content/about.json?v=20260824o`) : contentRequest;
   const worksRequest = page === 'project' ? getJson(`${base}/content/works.json?v=20260903a`) : Promise.resolve(null);
   const [p, about, works] = await Promise.all([contentRequest, aboutRequest, worksRequest]);
+  if (page === 'project' && (!p.hero || !p.overview)) { location.replace(`${base}/works/`); return; }
   const root = document.querySelector('#app');
   const esc = value => String(value ?? '').replace(/[&<>\"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
   const asset = path => /^(https?:|data:|\/)/.test(path) ? path : `${base}/${String(path).replace(/^\.\.\//, '')}`;

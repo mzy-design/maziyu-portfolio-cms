@@ -9,7 +9,7 @@
   "services": ["Product concept", "Packaging structure", "User interaction"],
   "hero": "images/projects/easy-scoop-jar/final-zhiben.png",
   "overview": "针对面霜罐取料不便、工具收纳与盖体开启阻力，围绕省力开合、挖勺整合和更直观的取用路径提出三组结构方向，并将最终方向应用于至本客户提案。",
-  "overviewEn": "A structural packaging proposal addressing difficult product access, spatula storage and lid-opening resistance in skincare jars. I developed three directions around easier opening, integrated spatula storage and a more intuitive use sequence; the final direction was presented in a proposal for Zhiben.",
+  "overviewEn": "A structural packaging proposal addressing difficulty accessing the formula, spatula storage and lid-opening resistance in skincare jars. I developed three directions around easier opening, integrated spatula storage and a more intuitive use sequence; the final direction was presented in a proposal for Zhiben.",
   "sections": [
     {
       "heading": "问题与结构分析",
@@ -28,7 +28,7 @@
     },
     {
       "heading": "使用路径验证",
-      "headingEn": "Use-sequence Validation",
+      "headingEn": "Use Sequence Validation",
       "body": "围绕开启、挖勺取用与用后归位三个连续动作，验证上盖密封、倒置收纳及内外瓶配合，让工具取放更直观，并减少额外操作。",
       "bodyEn": "The opening, spatula retrieval and return sequence was reviewed alongside lid sealing, inverted storage and the fit between the inner jar and outer container, making the tool easier to access and replace.",
       "image": "images/projects/easy-scoop-jar/usage-path.png"
