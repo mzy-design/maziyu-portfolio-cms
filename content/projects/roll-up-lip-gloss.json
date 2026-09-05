@@ -3,20 +3,26 @@
   "title": "Visual & Concept",
   "displayTitle": "Visual & Concept",
   "note": "创意概念 · 挂绳式随身彩妆",
+  "noteEn": "Portable beauty concepts and interactions",
   "subtitle": "Creative Concept",
   "year": "2025",
   "services": ["Product concept", "Portable interaction", "CMF"],
   "hero": "images/projects/roll-up-lip-gloss/hero.jpg",
   "overview": "围绕随身携带与个性表达展开的彩妆概念，将紧凑容器、挂绳配件与系列化 CMF 组合为可携带、可搭配的产品系统。",
+  "overviewEn": "Beauty packaging concepts exploring portability and self-expression through compact containers, wearable accessories, interaction and coordinated CMF.",
   "sections": [
     {
       "heading": "Oreo",
+      "headingEn": "Oreo Compact Concept",
       "body": "通过旋转顶部旋钮，同时弹出两侧粉盒，形成紧凑而具有仪式感的彩妆交互。双侧空间可容纳粉饼，也可组合粉扑、镜子或随身工具；顶部旋钮可依据品牌语言定制。",
+      "bodyEn": "Turning the top control releases two side compartments, creating a compact cosmetic interaction with a deliberate reveal. The compartments can hold pressed-powder pans or combine a puff, mirror and portable tools; the top control can be adapted to a brand's design language.",
       "image": "images/projects/oreo/cover.gif"
     },
     {
       "heading": "一种便于单手挤压的化妆品容器",
+      "headingEn": "One-handed Grip Tottle",
       "body": "产品概念与结构设计。以单侧凹陷形成自然的手指支点，在紧凑圆润的形态中改善单手挤压、握持控制与便携性；该方向后续由 WWP Beauty 以可持续 PP / PE、人体工学与便携为核心公开发布。",
+      "bodyEn": "Product concept and structural design. A single recessed side creates a natural finger rest, improving one-handed squeezing, grip control and portability within a compact, rounded form. WWP Beauty later presented this direction publicly with an emphasis on recyclable PP/PE, ergonomics and portability.",
       "images": ["images/projects/wwp-beauty/cover.jpg", "images/projects/roll-up-lip-gloss/official-release.png"],
       "layout": "pair"
     }
@@ -25,6 +31,7 @@
     "eyebrow": "Design Note",
     "meta": "One-hand interaction · Product & structural design",
     "text": "单侧凹陷既是视觉识别，也是自然的手指支点。方案以较少的形态干预改善单手挤压、握持控制与随身携带体验，并将可持续 PP / PE 材料、紧凑圆形比例与量产结构纳入同一产品语言。"
+    ,"textEn": "The recessed side works as both a visual signature and a natural finger rest. A restrained form change improves one-handed squeezing, grip control and portability while bringing recyclable PP/PE materials, compact proportions and a production-ready structure into one product language."
   },
   "gallery": [],
   "next": {"title": "Easy-Scoop Jar", "href": "../easy-scoop-jar/"}

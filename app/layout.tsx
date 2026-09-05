@@ -1,16 +1,16 @@
 export const metadata = {
-  metadataBase: new URL('https://maziyu-portfolio.fd76kmdt6h.chatgpt.site'),
-  title: 'Ma ZiYu — Portfolio',
-  description: 'Ma ZiYu — industrial and packaging designer',
+  metadataBase: new URL('https://maziyudesign.com'),
+  title: 'Ma Ziyu (Iven) — Product & Packaging Designer',
+  description: 'Shanghai-based Product & Packaging Designer focused on beauty packaging, CMF, structural design, prototyping, tooling and production development.',
   openGraph: {
-    title: 'Ma ZiYu — Portfolio',
-    description: 'Industrial & Packaging Designer',
+    title: 'Ma Ziyu (Iven) — Product & Packaging Designer',
+    description: 'Beauty and personal-care packaging, product design, CMF and production development in Shanghai.',
     images: ['/images/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ma ZiYu — Portfolio',
-    description: 'Industrial & Packaging Designer',
+    title: 'Ma Ziyu (Iven) — Product & Packaging Designer',
+    description: 'Beauty and personal-care packaging, product design, CMF and production development in Shanghai.',
     images: ['/images/og.png'],
   },
 };

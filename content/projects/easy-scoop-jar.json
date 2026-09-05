@@ -3,36 +3,48 @@
   "title": "Easy-Scoop Jar",
   "displayTitle": "Easy-Scoop Jar",
   "note": "省力取料面霜罐 / 至本提案",
+  "noteEn": "Easier-scoop skincare jar / Zhiben proposal",
   "subtitle": "Structure & Interaction",
   "year": "2026",
   "services": ["Product concept", "Packaging structure", "User interaction"],
   "hero": "images/projects/easy-scoop-jar/final-zhiben.png",
   "overview": "针对面霜罐取料不便、工具收纳与盖体开启阻力，围绕省力开合、挖勺整合和更直观的取用路径提出三组结构方向，并将最终方向应用于至本客户提案。",
+  "overviewEn": "A structural packaging proposal addressing difficult product access, spatula storage and lid-opening resistance in skincare jars. I developed three directions around easier opening, integrated spatula storage and a more intuitive use sequence; the final direction was presented in a proposal for Zhiben.",
   "sections": [
     {
       "heading": "问题与结构分析",
+      "headingEn": "Problem and Structure Analysis",
       "body": "从盖体开启、挖勺收纳、内胆连接与握持摩擦四个触点拆解现有面霜罐，明确在不增加操作步骤的前提下改善取料体验。",
+      "bodyEn": "The analysis examined four touchpoints—lid opening, spatula storage, refill connection and grip friction—to improve product access without adding steps to the routine.",
       "image": "images/projects/easy-scoop-jar/structure-analysis.png",
       "layout": "split"
     },
     {
       "heading": "三组优化方向",
+      "headingEn": "Three Design Directions",
       "body": "方案分别探索隐藏式辅助开启、去除传统铰链的直插连接，以及扩大品牌展示与握持区域。三组方向共同保留低学习成本与简洁外观。",
+      "bodyEn": "The concepts explored concealed opening assistance, a direct-fit connection without a conventional hinge, and a larger area for branding and grip. Each retained a simple appearance and low learning curve.",
       "image": "images/projects/easy-scoop-jar/concept-directions.png"
     },
     {
       "heading": "使用路径验证",
+      "headingEn": "Use-sequence Validation",
       "body": "围绕开启、挖勺取用与用后归位三个连续动作，验证上盖密封、倒置收纳及内外瓶配合，让工具取放更直观，并减少额外操作。",
+      "bodyEn": "The opening, spatula retrieval and return sequence was reviewed alongside lid sealing, inverted storage and the fit between the inner jar and outer container, making the tool easier to access and replace.",
       "image": "images/projects/easy-scoop-jar/usage-path.png"
     },
     {
       "heading": "客户提案与方案收敛",
+      "headingEn": "Client Proposal and Refinement",
       "body": "最终方案以更清晰的盖体层级、便于取用的挖勺与稳定的罐体比例完成收敛，并通过柔和材质与自然色彩表达温和的护肤体验。",
+      "bodyEn": "The proposal was refined with a clearer lid hierarchy, an accessible spatula and balanced jar proportions. Soft materials and natural colours communicate a gentle skincare experience.",
       "image": "images/projects/easy-scoop-jar/final-zhiben.png"
     },
     {
       "heading": "结构拆解",
+      "headingEn": "Exploded Structure",
       "body": "最终结构将密封上盖、挖勺收纳、可拆内胆与外瓶依次整合，在保持简洁外观的同时，让取用、归位与拆装路径更清晰。",
+      "bodyEn": "The final structure integrates a sealing lid, spatula storage, removable inner jar and outer container, clarifying product access, tool return and disassembly while maintaining a clean exterior.",
       "image": "images/projects/easy-scoop-jar/exploded-view.png"
     }
   ],

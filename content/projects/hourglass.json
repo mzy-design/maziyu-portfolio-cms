@@ -2,33 +2,43 @@
   "number": "01",
   "title": "Hourglass",
   "note": "客户选中方案",
+  "noteEn": "Client-selected proposal",
   "subtitle": "Packaging & CMF",
   "year": "2026",
   "services": ["Product design", "Packaging design", "CMF"],
   "hero": "images/projects/hourglass/final-wide.jpg",
   "overview": "围绕 Hourglass 液体眼影包装展开的客户提案，从品牌几何语言、瓶盖识别与系列化 CMF 出发，形成兼顾精致感、陈列辨识度与量产可行性的方案体系。",
+  "overviewEn": "A packaging proposal for Hourglass Phantom Liquid Eyeshadow. My contribution covered five design directions, applicator exploration and overall form refinement. Three designs were selected for two rounds of prototyping, and the tooling solution was confirmed.",
   "sections": [
     {
       "heading": "品牌与结构方向",
+      "headingEn": "Brand and Structural Directions",
       "body": "从 Hourglass 标志性的切面、金属质感与建筑式比例中提取语言，探索方形、圆角和切角瓶盖与透明料体容器的组合。",
+      "bodyEn": "Drawing on Hourglass's faceted geometry, metallic finishes and architectural proportions, I explored square, rounded and chamfered caps paired with transparent bottles.",
       "images": ["images/projects/hourglass/process/direction-01.png", "images/projects/hourglass/process/direction-02.png"],
       "layout": "pair"
     },
     {
       "heading": "入选方向",
-      "body": "首轮提案从涂抹方式、瓶盖识别与容器比例三个维度展开。六组方向在统一品牌语言下呈现不同的结构与使用体验，并依据客户反馈进入下一轮深化。",
+      "headingEn": "Selected Directions",
+      "body": "首轮提案从涂抹方式、瓶盖识别与容器比例三个维度展开。五组方向在统一品牌语言下呈现不同的结构与使用体验，其中三组依据客户反馈进入下一轮深化。",
+      "bodyEn": "The first proposal explored five directions across application, cap identity and bottle proportions. Three designs were selected for further development based on client feedback.",
       "image": "images/projects/hourglass/process/selected-directions.png",
       "layout": "strip"
     },
     {
       "heading": "系列化方案",
+      "headingEn": "Design Refinement",
       "body": "进一步比较顶部识别、握持比例、刷杆连接与色彩系统，让不同方案保持品牌一致性，同时具备各自清晰的货架识别。",
+      "bodyEn": "Further refinement compared top-view recognition, grip proportions, wand connections and colour systems. Two rounds of prototyping were used to review the selected designs while maintaining a consistent brand language.",
       "images": ["images/projects/hourglass/process/direction-03.png", "images/projects/hourglass/process/selected-scheme.png"],
       "layout": "pair"
     },
     {
       "heading": "最终效果",
-      "body": "客户确认方向以简洁的金属顶盖、透明瓶身与克制的暖色 CMF 收敛，突出料体色彩并维持 Hourglass 的精致视觉。",
+      "headingEn": "Confirmed Direction",
+      "body": "客户确认方向以简洁的金属顶盖、透明瓶身与克制的暖色 CMF 收敛，突出料体色彩并维持 Hourglass 的精致视觉；开模方案已确认。",
+      "bodyEn": "The confirmed direction combines a restrained metallic cap, transparent bottle and warm CMF palette to foreground the formula colour while retaining Hourglass's refined visual language. The tooling solution was confirmed.",
       "image": "images/projects/hourglass/final-wide.jpg"
     }
   ],
