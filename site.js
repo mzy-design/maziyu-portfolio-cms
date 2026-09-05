@@ -15,16 +15,14 @@
   const esc = value => String(value ?? '').replace(/[&<>\"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
   const asset = path => /^(https?:|data:|\/)/.test(path) ? path : `${base}/${String(path).replace(/^\.\.\//, '')}`;
   const optimized = new Map([['concept-directions.png', [1600,1057]], ['exploded-view.png', [1600,1054]], ['final-zhiben.png', [1600,1057]], ['usage-path.png', [1600,1056]]]);
-  let projectMediaIndex = 0;
   const media = (path, alt = '', className = '') => {
     if (!path) return `<div class="media-placeholder ${className}" role="img" aria-label="图片占位符"><span>Image placeholder</span></div>`;
     const isHero = className === 'project-hero';
-    const isNear = page === 'project' && !className && projectMediaIndex++ < 2;
     const dimensions = optimized.get(path.split('/').pop());
     const canOptimize = path.includes('/easy-scoop-jar/') && dimensions;
     const src = canOptimize ? path.replace(/\.png$/, '-1600.webp') : path;
     const srcset = canOptimize ? ` srcset="${esc(asset(path.replace(/\.png$/, '-960.webp')))} 960w, ${esc(asset(src))} 1600w" sizes="${isHero ? '100vw' : '(max-width:760px) 100vw, 100vw'}"` : '';
-    return `<img class="${className}" src="${esc(asset(src))}"${srcset}${canOptimize ? ` width="${dimensions[0]}" height="${dimensions[1]}"` : ''} alt="${esc(alt)}" loading="${isHero || isNear ? 'eager' : 'lazy'}" decoding="async"${isHero ? ' fetchpriority="high"' : ''}>`;
+    return `<img class="${className}" src="${esc(asset(src))}"${srcset}${canOptimize ? ` width="${dimensions[0]}" height="${dimensions[1]}"` : ''} alt="${esc(alt)}" loading="${isHero ? 'eager' : 'lazy'}" decoding="async"${isHero ? ' fetchpriority="high"' : ''}>`;
   };
   const fanItems = about.carousel;
 
